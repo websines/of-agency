@@ -1,284 +1,232 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
-import DropdownMenu from "./DropdownMenu";
 import Image from "next/image";
 import Link from "next/link";
+import React, { useEffect, useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { cn } from "@/lib/utils";
+import {
+  NavigationMenu,
+  NavigationMenuContent,
+  NavigationMenuItem,
+  NavigationMenuLink,
+  NavigationMenuList,
+  NavigationMenuTrigger,
+  navigationMenuTriggerStyle,
+} from "@/components/ui/navigation-menu";
 
-type DropdownName = "management" | "about" | "updates";
-
-const NavBar = () => {
-  const [dropdownOpen, setDropdownOpen] = useState({
-    management: false,
-    about: false,
-    updates: false,
-  });
-
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-
-  const handleMobileMenuToggle = () => {
-    setMobileMenuOpen(!mobileMenuOpen);
-    document.body.style.overflow = mobileMenuOpen ? "auto" : "hidden";
-  };
-
-  const MANAGEMENT_LINK = [
+const Navbar = () => {
+  const components: { title: string; href: string; description: string }[] = [
     {
-      href: "/account-management",
-      label: "Account Management",
+      title: "Alert Dialog",
+      href: "/docs/primitives/alert-dialog",
+      description:
+        "A modal dialog that interrupts the user with important content and expects a response.",
     },
     {
-      href: "/growth-management",
-      label: "Growth Management",
+      title: "Hover Card",
+      href: "/docs/primitives/hover-card",
+      description:
+        "For sighted users to preview content available behind a link.",
     },
     {
-      href: "/case-studies",
-      label: "Case Studies",
+      title: "Progress",
+      href: "/docs/primitives/progress",
+      description:
+        "Displays an indicator showing the completion progress of a task, typically displayed as a progress bar.",
     },
     {
-      href: "/faqs",
-      label: "FAQs",
+      title: "Scroll-area",
+      href: "/docs/primitives/scroll-area",
+      description: "Visually or semantically separates content.",
     },
   ];
-  const ABOUTS_LINK = [
-    {
-      href: "/about-us",
-      label: "About Us",
-    },
-    {
-      href: "/careers",
-      label: "Careers",
-    },
-    {
-      href: "/partnership",
-      label: "Partnership",
-    },
-  ];
+  const [isOverlayOpen, setOverlayOpen] = useState(false);
 
-  const NEWS_LINK = [
-    {
-      href: "/newsletter",
-      label: "Newsletter",
-    },
-    {
-      href: "/open-a-franchise",
-      label: "Open a Franchise",
-    },
-    {
-      href: "/sell-your-agency",
-      label: "Sell Your Agency",
-    },
-    {
-      href: "/invest-in-career",
-      label: "Invest in a Model's Career",
-    },
-  ];
+  useEffect(() => {
+    if (isOverlayOpen) {
+      document.body.classList.add("overflow-hidden");
+    } else {
+      document.body.classList.remove("overflow-hidden");
+    }
+  }, [isOverlayOpen]);
 
-  const handleDropdownToggle = (dropdownName: any) => {
-    setDropdownOpen((prevState) => ({
-      ...prevState,
-      [dropdownName as DropdownName]: !prevState[dropdownName as DropdownName],
-    }));
+  const handleOverlayToggle = () => {
+    setOverlayOpen(!isOverlayOpen);
   };
   return (
-    <nav className="flex flex-row justify-center items-center min-w-full bg-gray-100 drop-shadow-sm">
-      <div className="hidden sm:flex flex-row justify-between px-4 py-3 items-center w-full">
-        <Image
-          alt="logo"
-          src={""}
-          height={88}
-          width={200}
-          className="mx-6 -my-2"
-        />
-        <ul className="p-2 flex flex-row justify-evenly w-[60%] mx-6">
-          <li className="cursor-pointer">Home</li>
-          <li>
-            <div className="flex flex-col justify-center items-center relative">
-              <div className="inline-flex flex-row">
-                <p
-                  className="cursor-pointer"
-                  onMouseEnter={() => handleDropdownToggle("management")}
-                >
-                  Management <span>v</span>
-                </p>
-              </div>
-              <div
-                className={`${
-                  dropdownOpen.management ? "flex flex-col" : "hidden"
-                } w-48 mt-4 duration-300 ease-in-out z-50 absolute top-[10px] left-[5px]`}
-                onMouseLeave={() => handleDropdownToggle("management")}
-              >
-                {MANAGEMENT_LINK.map((link) => (
-                  <div key={link.label} className="bg-white">
-                    <DropdownMenu href={link.href} label={link.label} />
-                  </div>
-                ))}
-              </div>
-            </div>
-          </li>
-          <li>
-            <div className="flex flex-col justify-center items-center relative">
-              <div className="inline-flex flex-row">
-                <p
-                  className="cursor-pointer"
-                  onMouseEnter={() => handleDropdownToggle("about")}
-                >
-                  About <span>v</span>
-                </p>
-              </div>
-              <div
-                className={`${
-                  dropdownOpen.about ? "flex flex-col" : "hidden"
-                } w-48 mt-4 duration-300 ease-in-out z-50 absolute top-[10px] left-[15px]`}
-                onMouseLeave={() => handleDropdownToggle("about")}
-              >
-                {ABOUTS_LINK.map((link) => (
-                  <div key={link.label} className="bg-white">
-                    <DropdownMenu href={link.href} label={link.label} />
-                  </div>
-                ))}
-              </div>
-            </div>
-          </li>
-          <li>
-            <div className="flex flex-col justify-center items-center relative">
-              <div className="inline-flex flex-row">
-                <p
-                  className="cursor-pointer"
-                  onMouseEnter={() => handleDropdownToggle("updates")}
-                >
-                  Updates & Newsletter <span>v</span>
-                </p>
-              </div>
-              <div
-                className={`${
-                  dropdownOpen.updates ? "flex flex-col" : "hidden"
-                } w-48 mt-4 duration-300 ease-in-out z-50 absolute top-[10px] left-[5px]`}
-                onMouseLeave={() => handleDropdownToggle("updates")}
-              >
-                {NEWS_LINK.map((link) => (
-                  <div key={link.label} className="bg-white">
-                    <DropdownMenu href={link.href} label={link.label} />
-                  </div>
-                ))}
-              </div>
-            </div>
-          </li>
-          <li className="cursor-pointer">Contact</li>
-        </ul>
-      </div>
-      <div className="min-w-full flex sm:hidden flex-row justify-between items-center p-2">
-        <Image src={""} height={70} width={150} alt="logo" className="mx-2" />
-        <div className="mx-4">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke-width="1.5"
-            stroke="currentColor"
-            className="w-6 h-6 cursor-pointer"
-            onClick={handleMobileMenuToggle}
+    <nav className="w-full top-0 p-4 bg-transparent z-50">
+      <div className="flex flex-row justify-between items-center">
+        <div className="flex flex-row justify-center items-center space-x-2 sm:ml-4 z-50">
+          <motion.div
+            className="rounded-full p-4 bg-gray-100 cursor-pointer relative hover:scale-105 hover:bg-gray-200 z-50"
+            onClick={handleOverlayToggle}
+            initial={{ opacity: 1 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.5 }}
           >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-            />
-          </svg>
-        </div>
-      </div>
-      <div
-        className={`fixed inset-0 bg-gray-500 bg-opacity-50 transition-opacity duration-300 ${
-          mobileMenuOpen
-            ? "opacity-100 pointer-events-auto"
-            : "opacity-0 pointer-events-none"
-        }`}
-      ></div>
-      <div
-        className={`sm:hidden fixed inset-y-0 right-0 w-4/5 bg-gray-200 transform transition-transform duration-300 ease-in-out min-h-screen ${
-          mobileMenuOpen ? "translate-x-0" : "translate-x-full"
-        }`}
-      >
-        <div className="flex flex-row justify-between items-center p-4">
-          <Image alt="logo" src={""} height={88} width={200} className="mx-6" />
-          <span>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"
-              stroke-width="1.5"
+              strokeWidth="1.5"
               stroke="currentColor"
-              className="w-10 h-10 mr-6 cursor-pointer"
-              onClick={handleMobileMenuToggle}
+              className="w-6 h-6"
             >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M6 18L18 6M6 6l12 12"
-              />
+              {isOverlayOpen ? (
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              ) : (
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25H12"
+                />
+              )}
             </svg>
-          </span>
+          </motion.div>
+          <Image src={""} className="w-[116px] h-[50px]" alt="logo" />
         </div>
-        <div className="flex flex-col justify-center items-center">
-          <Link
-            href="#"
-            className="px-12 py-2 text-white hover:scale-90 duration-300 ease-in-out font-semibold hover:text-black hover:bg-white bg-blue-950 w-[80%] flex flex-row space-x-2"
-          >
-            <p className="ml-6 text-sm"> Start Model Application</p>
-            <span>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke-width="1.5"
-                stroke="currentColor"
-                className="w-4 h-5"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M6 12L3.269 3.126A59.768 59.768 0 0121.485 12 59.77 59.77 0 013.27 20.876L5.999 12zm0 0h7.5"
-                />
-              </svg>
-            </span>
-          </Link>
-          <ul className="my-12 space-y-4 font-semibold text-black self-start px-12">
-            <li>Home</li>
-            <hr className="h-[1px] border-1 border-gray-400 w-[60vw]" />
-            <li>Management</li>
-            <hr className="h-[1px] border-1 border-gray-400 w-[60vw]" />
-            <li>About</li>
-            <hr className="h-[1px] border-1 border-gray-400 w-[60vw]" />
-            <li>News & Updates</li>
-            <hr className="h-[1px] border-1 border-gray-400 w-[60vw]" />
-            <li>Contact Us</li>
+        <div className="w-[50%] justify-center items-center mx-auto">
+          <ul className="hidden sm:flex flex-row justify-evenly items-center">
+            <NavigationMenu>
+              <NavigationMenuList>
+                <NavigationMenuItem className="hover:bg-gray-600 rounded-[10px] hover:bg-opacity-20 text-black">
+                  <Link href="/">
+                    <NavigationMenuLink
+                      className={navigationMenuTriggerStyle()}
+                    >
+                      Home
+                    </NavigationMenuLink>
+                  </Link>
+                </NavigationMenuItem>
+                <NavigationMenuItem>
+                  <NavigationMenuTrigger>Management</NavigationMenuTrigger>
+                  <NavigationMenuContent>
+                    <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
+                      {components.map((component) => (
+                        <ListItem
+                          key={component.title}
+                          title={component.title}
+                          href={component.href}
+                        >
+                          {component.description}
+                        </ListItem>
+                      ))}
+                    </ul>
+                  </NavigationMenuContent>
+                </NavigationMenuItem>
+                <NavigationMenuItem className="hover:bg-gray-600 rounded-[10px] hover:bg-opacity-20 text-black">
+                  <Link href="/">
+                    <NavigationMenuLink
+                      className={navigationMenuTriggerStyle()}
+                    >
+                      About
+                    </NavigationMenuLink>
+                  </Link>
+                </NavigationMenuItem>
+                <NavigationMenuItem className="hover:bg-gray-600 rounded-[10px] hover:bg-opacity-20 text-black">
+                  <Link href="/">
+                    <NavigationMenuLink
+                      className={navigationMenuTriggerStyle()}
+                    >
+                      Blogs
+                    </NavigationMenuLink>
+                  </Link>
+                </NavigationMenuItem>
+                <NavigationMenuItem className="hover:bg-gray-600 rounded-[10px] hover:bg-opacity-20 text-black">
+                  <Link href="/">
+                    <NavigationMenuLink
+                      className={navigationMenuTriggerStyle()}
+                    >
+                      Contact
+                    </NavigationMenuLink>
+                  </Link>
+                </NavigationMenuItem>
+              </NavigationMenuList>
+            </NavigationMenu>
           </ul>
-
-          <Link
-            href="#"
-            className="px-12 py-2 text-black hover:scale-90 duration-300 ease-in-out font-semibold hover:text-white hover:bg-black bg-white w-[80%] flex flex-row"
-          >
-            <span>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke-width="1.5"
-                stroke="currentColor"
-                className="w-6 h-6"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"
-                />
-              </svg>
-            </span>
-            <p className="ml-16">Sign In</p>
-          </Link>
         </div>
+        <Link
+          href="/"
+          className="px-8 w-[60%] sm:w-auto py-4 bg-black rounded-lg text-white font-semibold hover:bg-emerald-600 hover:text-black text-sm transition duration-200 ease-in-out hover:scale-105 flex flex-row items-center justify-center"
+        >
+          Apply Now
+        </Link>
       </div>
+
+      {/* Black Screen Overlay */}
+      <AnimatePresence>
+        {isOverlayOpen && (
+          <motion.div
+            className="fixed inset-0 bg-black bg-opacity-100 flex items-center justify-center z-40"
+            style={{ maxHeight: "100vh" }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.3 }}
+          >
+            <div className="flex flex-col w-full p-16 items-start justify-start h-full text-white">
+              <div className="h-[10%] sm:h-[20%] bg-transparent" />
+              <div className="flex flex-col justify-start items-start p-4 w-full sm:w-[40%]">
+                <ul className="text-xl font-semibold w-full">
+                  <li className="p-4 hover:bg-gray-500 hover:bg-opacity-25 rounded-xl w-full flex flex-row items-baseline space-x-3">
+                    <span className="text-sm font-semibold ">01. </span>{" "}
+                    <span className="font-bold tracking-wide">Home</span>
+                  </li>
+                  <li className="p-4 hover:bg-gray-500 hover:bg-opacity-25 rounded-xl w-full flex flex-row items-baseline space-x-3">
+                    <span className="text-sm font-semibold ">02. </span>{" "}
+                    <span className="font-bold tracking-wide">Management</span>
+                  </li>
+                  <li className="p-4 hover:bg-gray-500 hover:bg-opacity-25 rounded-xl w-full flex flex-row items-baseline space-x-3">
+                    <span className="text-sm font-semibold ">03. </span>{" "}
+                    <span className="font-bold tracking-wide">About</span>
+                  </li>
+                  <li className="p-4 hover:bg-gray-500 hover:bg-opacity-25 rounded-xl w-full flex flex-row items-baseline space-x-3">
+                    <span className="text-sm font-semibold ">04. </span>{" "}
+                    <span className="font-bold tracking-wide">Blogs</span>
+                  </li>
+                  <li className="p-4 hover:bg-gray-500 hover:bg-opacity-25 rounded-xl w-full flex flex-row items-baseline space-x-3">
+                    <span className="text-sm font-semibold ">05. </span>{" "}
+                    <span className="font-bold tracking-wide">Contact</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </nav>
   );
 };
 
-export default NavBar;
+const ListItem = React.forwardRef<
+  React.ElementRef<"a">,
+  React.ComponentPropsWithoutRef<"a">
+>(({ className, title, children, ...props }, ref) => {
+  return (
+    <li>
+      <NavigationMenuLink asChild>
+        <a
+          ref={ref}
+          className={cn(
+            "block select-none space-y-1 rounded-xl p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground hover:bg-gray-600 hover:bg-opacity-25",
+            className
+          )}
+          {...props}
+        >
+          <div className="text-sm font-medium leading-none">{title}</div>
+          <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+            {children}
+          </p>
+        </a>
+      </NavigationMenuLink>
+    </li>
+  );
+});
+ListItem.displayName = "ListItem";
+
+export default Navbar;
