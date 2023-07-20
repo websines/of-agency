@@ -1,13 +1,8 @@
-"use client";
 import BlogsSection from "@/components/BlogsSection";
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect } from "react";
 
 export default function Home() {
-  useEffect(() => {
-    import("preline");
-  }, []);
   return (
     <main className="bg-white">
       <section id="slide-1" className="w-full min-h-screen relative">
