@@ -32,7 +32,7 @@ export default function Home() {
 
           <Link
             href="#slide-2"
-            className="w-16 h-16 rounded-full border-2 border-black relative mt-8 mx-4 hover:bg-black hover:border-white hover:text-white"
+            className="hidden sm:block w-16 h-16 rounded-full border-2 border-black relative mt-8 mx-4 hover:bg-black hover:border-white hover:text-white"
           >
             <span>
               <svg

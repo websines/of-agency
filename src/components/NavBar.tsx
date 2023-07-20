@@ -57,7 +57,7 @@ const Navbar = () => {
   return (
     <nav className="w-full top-0 p-4 bg-transparent z-50">
       <div className="flex flex-row justify-between items-center">
-        <div className="flex flex-row justify-center items-center space-x-2 sm:ml-4 z-50">
+        <div className="flex flex-row justify-center items-center space-x-2 ml-4 z-50">
           <motion.div
             className="rounded-full p-4 bg-gray-100 cursor-pointer relative hover:scale-105 hover:bg-gray-200 z-50"
             onClick={handleOverlayToggle}
