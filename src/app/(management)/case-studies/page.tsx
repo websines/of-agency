@@ -1,4 +1,4 @@
-import { sanity_client } from "../../../lib/sanity";
+import { sanity_client } from "@/lib/sanity-client";
 import React from "react";
 import { Blog } from "@/lib/types";
 import Link from "next/link";

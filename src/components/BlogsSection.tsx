@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { sanity_client, urlFor } from "@/lib/sanity";
+import { sanity_client, urlFor } from "@/lib/sanity-client";
 import { Blog } from "@/lib/types";
 
 const getData = async () => {
