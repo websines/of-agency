@@ -24,7 +24,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`bg-white ${poppins.className}`}>
+      <body className={`bg-white ${poppins.className} text-black`}>
         <SupabaseProvider>
           <UserProvider>
             <TopBar />
