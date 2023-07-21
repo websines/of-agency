@@ -1,7 +1,6 @@
 "use client";
 
-import DashboardNav from "@/components/DashboardNav";
-import { useSessionContext } from "@supabase/auth-helpers-react";
+import DashboardNav from "@/components/dashboard/DashboardNav";
 
 export default function DashboardLayout({
   children,

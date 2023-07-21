@@ -1,8 +1,21 @@
 "use client";
 
 import React from "react";
-import { UserNav } from "./dashboard/UserNav";
+import { UserNav } from "./UserNav";
 import { useSessionContext } from "@supabase/auth-helpers-react";
+import { Button } from "@/components/ui/button";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { CredentialsModal } from "./CredentialsModal";
 
 const DashboardNav = () => {
   const { session } = useSessionContext();
@@ -12,7 +25,9 @@ const DashboardNav = () => {
         <h1 className="p-2 rounded bg-gray-300 bg-opacity-30 tracking-wide">
           OFFNG
         </h1>
-        <div className=""></div>
+        <div className="z-40">
+          <CredentialsModal />
+        </div>
       </div>
       <div className="">
         <UserNav email={session?.user?.email} />

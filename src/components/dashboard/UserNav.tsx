@@ -21,11 +21,14 @@ export function UserNav({ email }: NavProps) {
       <DropdownMenuTrigger asChild>
         <Button
           variant="ghost"
-          className="relative h-8 w-8 rounded-full bg-gray-100"
+          className="relative h-12 w-12 rounded-full bg-gray-100"
         >
-          <Avatar className="h-8 w-8">
-            <AvatarImage src="/avatars/01.png" alt="@shadcn" />
-            <AvatarFallback>SC</AvatarFallback>
+          <Avatar className="h-12 w-12">
+            <AvatarImage
+              src="https://public.onlyfans.com/files/k/ko/kon/konubetjup5ushmbht6aolz8v16rxix01674651010/287357099/avatar.jpg"
+              alt="@shadcn"
+            />
+            <AvatarFallback>TS</AvatarFallback>
           </Avatar>
         </Button>
       </DropdownMenuTrigger>
