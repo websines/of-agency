@@ -1,8 +1,19 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { sanity_client, urlFor } from "@/lib/sanity";
+import { Blog } from "@/lib/types";
 
-const BlogsSection = () => {
+const getData = async () => {
+  const query = `*[_type == "blog"][0...3]| order(_createdAt desc)`;
+
+  const data = sanity_client.fetch(query);
+
+  return data;
+};
+
+const BlogsSection = async () => {
+  const data = (await getData()) as Blog[];
   return (
     <section className="p-16 flex flex-col justify-center items-center">
       <div className="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
@@ -16,97 +27,37 @@ const BlogsSection = () => {
           </p>
         </div>
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          <a
-            className="group flex flex-col h-full border border-gray-200 hover:border-transparent hover:shadow-lg transition-all duration-300 rounded-xl p-5 dark:border-gray-700 dark:hover:border-transparent dark:hover:shadow-black/[.4]"
-            href="#"
-          >
-            <div className="aspect-w-16 aspect-h-11">
-              <img
-                className="w-full object-cover rounded-xl"
-                src="https://images.unsplash.com/photo-1633114128174-2f8aa49759b0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80"
-                alt="Image Description"
-              />
-            </div>
-            <div className="my-6">
-              <h3 className="text-xl font-semibold text-gray-800 dark:text-gray-300 dark:group-hover:text-white">
-                Lorem ipsum
-              </h3>
-              <p className="mt-5 text-gray-600 dark:text-gray-400">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum,
-                atque a. Libero iusto sit exercitationem odit soluta porro
-                molestiae, veritatis excepturi minima dolorum consequuntur, vero
-                nam a earum? Ad, dolorum!
-              </p>
-            </div>
-            <div className="mt-auto flex items-center gap-x-3">
-              <div>
-                <h5 className="text-sm text-gray-800 dark:text-gray-200">
-                  20 July, 2023
-                </h5>
+          {data.map((post) => (
+            <Link
+              className="group flex flex-col h-full border border-gray-200 hover:border-transparent hover:shadow-lg transition-all duration-300 rounded-xl p-5 dark:border-gray-700 dark:hover:border-transparent dark:hover:shadow-black/[.4]"
+              href={`/blog/${post.slug.current}`}
+            >
+              <div className="aspect-w-16 aspect-h-11">
+                <Image
+                  className="w-full object-cover rounded-xl"
+                  src={urlFor(post.image.asset._ref).url()}
+                  alt={post.title}
+                  height={200}
+                  width={200}
+                />
               </div>
-            </div>
-          </a>
-          <a
-            className="group flex flex-col h-full border border-gray-200 hover:border-transparent hover:shadow-lg transition-all duration-300 rounded-xl p-5 dark:border-gray-700 dark:hover:border-transparent dark:hover:shadow-black/[.4]"
-            href="#"
-          >
-            <div className="aspect-w-16 aspect-h-11">
-              <img
-                className="w-full object-cover rounded-xl"
-                src="https://images.unsplash.com/photo-1562851529-c370841f6536?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3540&q=80"
-                alt="Image Description"
-              />
-            </div>
-            <div className="my-6">
-              <h3 className="text-xl font-semibold text-gray-800 dark:text-gray-300 dark:group-hover:text-white">
-                Something something something
-              </h3>
-              <p className="mt-5 text-gray-600 dark:text-gray-400">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odio
-                consequuntur quam possimus vitae alias, delectus voluptas id,
-                repellendus provident a minus temporibus officia architecto ea
-                cumque fugit deserunt est doloribus.
-              </p>
-            </div>
-            <div className="mt-auto flex items-center gap-x-3">
-              <div>
-                <h5 className="text-sm text-gray-800 dark:text-gray-200">
-                  20 July, 2023
-                </h5>
+              <div className="my-6">
+                <h3 className="text-xl font-semibold text-gray-800 dark:text-gray-300 dark:group-hover:text-white">
+                  {post.title}
+                </h3>
+                <p className="mt-5 text-gray-600 dark:text-gray-400">
+                  {post.overview}
+                </p>
               </div>
-            </div>
-          </a>
-
-          <a
-            className="group flex flex-col h-full border border-gray-200 hover:border-transparent hover:shadow-lg transition-all duration-300 rounded-xl p-5 dark:border-gray-700 dark:hover:border-transparent dark:hover:shadow-black/[.4]"
-            href="#"
-          >
-            <div className="aspect-w-16 aspect-h-11">
-              <img
-                className="w-full object-cover rounded-xl"
-                src="https://images.unsplash.com/photo-1521321205814-9d673c65c167?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3548&q=80"
-                alt="Image Description"
-              />
-            </div>
-            <div className="my-6">
-              <h3 className="text-xl font-semibold text-gray-800 dark:text-gray-300 dark:group-hover:text-white">
-                Let's work together
-              </h3>
-              <p className="mt-5 text-gray-600 dark:text-gray-400">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Non
-                aliquam maiores eos, repellat enim ipsum at assumenda nemo
-                inventore commodi odio mollitia ea dolore reprehenderit
-                delectus! Ut sint placeat laboriosam.
-              </p>
-            </div>
-            <div className="mt-auto flex items-center gap-x-3">
-              <div>
-                <h5 className="text-sm text-gray-800 dark:text-gray-200">
-                  20 July, 2023
-                </h5>
+              <div className="mt-auto flex items-center gap-x-3">
+                <div>
+                  <h5 className="text-sm text-gray-800 dark:text-gray-200">
+                    {post._createdAt}
+                  </h5>
+                </div>
               </div>
-            </div>
-          </a>
+            </Link>
+          ))}
         </div>
         <div className="mt-12 text-center">
           <a

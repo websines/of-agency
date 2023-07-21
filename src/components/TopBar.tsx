@@ -1,9 +1,18 @@
+"use client";
+
+import { useSessionContext } from "@supabase/auth-helpers-react";
 import Link from "next/link";
 import React from "react";
 
 const TopBar = () => {
+  const { session } = useSessionContext();
+  const user = session?.user;
   return (
-    <div className="hidden w-full bg-black  sm:flex items-center justify-center">
+    <div
+      className={`hidden w-full bg-black  ${
+        user ? "" : "sm:flex"
+      }  items-center justify-center`}
+    >
       <div className="w-[80%] flex flex-row px-8 py-[14px] items-center justify-between">
         <div className="flex flex-row text-gray-300 justify-start items-center px-4 text-xs w-1/2 space-x-4">
           <Link
@@ -39,7 +48,7 @@ const TopBar = () => {
         </div>
         <div className="flex flex-row space-x-2 justify-end items-center">
           <Link
-            href="/my-account"
+            href="/login"
             className="font-semibold hover:text-orange-300 duration-300 text-xs text-white"
           >
             RM Sign In

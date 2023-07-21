@@ -1,5 +1,7 @@
+"use client";
+
 import { User } from "@supabase/auth-helpers-nextjs";
-import { UserDetails } from "../../types";
+import { UserDetails } from "../lib/types";
 import { createContext, useContext, useEffect, useState } from "react";
 import {
   useSessionContext,

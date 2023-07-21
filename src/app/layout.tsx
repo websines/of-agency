@@ -3,6 +3,8 @@ import "./globals.css";
 import { Poppins } from "next/font/google";
 import Footer from "@/components/Footer";
 import NavBar from "@/components/NavBar";
+import SupabaseProvider from "@/providers/SupabaseProvider";
+import UserProvider from "@/providers/UserProvider";
 //import { useEffect } from "react";
 
 const poppins = Poppins({
@@ -23,10 +25,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`bg-white ${poppins.className}`}>
-        <TopBar />
-        <NavBar />
-        {children}
-        <Footer />
+        <SupabaseProvider>
+          <UserProvider>
+            <TopBar />
+            <NavBar />
+            {children}
+            <Footer />
+          </UserProvider>
+        </SupabaseProvider>
       </body>
     </html>
   );

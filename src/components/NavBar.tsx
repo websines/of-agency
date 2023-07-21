@@ -14,31 +14,35 @@ import {
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
+import { useSessionContext } from "@supabase/auth-helpers-react";
 
 const Navbar = () => {
+  const { session } = useSessionContext();
+
+  const user = session?.user;
+
+  const [isManagementOpen, setManagementOpen] = useState(false);
+
   const components: { title: string; href: string; description: string }[] = [
     {
-      title: "Alert Dialog",
-      href: "/docs/primitives/alert-dialog",
-      description:
-        "A modal dialog that interrupts the user with important content and expects a response.",
+      title: "Account Management",
+      href: "/account-management",
+      description: "Lorem ipsum something something",
     },
     {
-      title: "Hover Card",
-      href: "/docs/primitives/hover-card",
-      description:
-        "For sighted users to preview content available behind a link.",
+      title: "Growth Management",
+      href: "/growth-management",
+      description: "Lorem Ipsum something something",
     },
     {
-      title: "Progress",
-      href: "/docs/primitives/progress",
-      description:
-        "Displays an indicator showing the completion progress of a task, typically displayed as a progress bar.",
+      title: "FAQs",
+      href: "/faqs",
+      description: "Frequently Asked Questions",
     },
     {
-      title: "Scroll-area",
-      href: "/docs/primitives/scroll-area",
-      description: "Visually or semantically separates content.",
+      title: "Case Studies",
+      href: "/case-studies",
+      description: "Read out success stories",
     },
   ];
   const [isOverlayOpen, setOverlayOpen] = useState(false);
@@ -54,8 +58,11 @@ const Navbar = () => {
   const handleOverlayToggle = () => {
     setOverlayOpen(!isOverlayOpen);
   };
+
   return (
-    <nav className="w-full top-0 p-4 bg-transparent z-50">
+    <nav
+      className={`${user ? "hidden" : ""} w-full top-0 p-4 bg-transparent z-50`}
+    >
       <div className="flex flex-row justify-between items-center">
         <div className="flex flex-row justify-center items-center space-x-2 ml-4 z-50">
           <motion.div
@@ -105,7 +112,7 @@ const Navbar = () => {
                 </NavigationMenuItem>
                 <NavigationMenuItem>
                   <NavigationMenuTrigger>Management</NavigationMenuTrigger>
-                  <NavigationMenuContent>
+                  <NavigationMenuContent className="bg-white">
                     <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
                       {components.map((component) => (
                         <ListItem
@@ -173,26 +180,73 @@ const Navbar = () => {
               <div className="h-[10%] sm:h-[20%] bg-transparent" />
               <div className="flex flex-col justify-start items-start p-4 w-full sm:w-[40%]">
                 <ul className="text-xl font-semibold w-full">
-                  <li className="p-4 hover:bg-gray-500 hover:bg-opacity-25 rounded-xl w-full flex flex-row items-baseline space-x-3">
-                    <span className="text-sm font-semibold ">01. </span>{" "}
-                    <span className="font-bold tracking-wide">Home</span>
+                  <Link href="/">
+                    <li className="p-4 hover:bg-gray-500 hover:bg-opacity-25 rounded-xl w-full flex flex-row items-baseline space-x-3">
+                      <span className="text-sm font-semibold ">01. </span>{" "}
+                      <span className="font-bold tracking-wide">Home</span>
+                    </li>
+                  </Link>
+                  <li
+                    className="p-4 hover:bg-gray-500 hover:bg-opacity-25 rounded-xl w-full flex flex-col items-baseline space-y-3 cursor-pointer"
+                    onClick={() => setManagementOpen(!isManagementOpen)}
+                  >
+                    <div className="flex flex-row items-baseline space-x-3">
+                      <span className="text-sm font-semibold ">02. </span>{" "}
+                      <span className="font-bold tracking-wide">
+                        Management
+                      </span>
+                    </div>
+                    <motion.div
+                      initial={{ opacity: 0, height: 0 }}
+                      animate={{ opacity: 1, height: "auto" }}
+                      exit={{ opacity: 0, height: 0 }}
+                      transition={{ duration: 0.3 }}
+                      className={`${
+                        isManagementOpen ? "flex" : "hidden"
+                      } flex-col`}
+                    >
+                      <ul className="flex flex-col space-y-2">
+                        <Link href="/account-management">
+                          <li className="p-2 hover:bg-gray-500 hover:bg-opacity-25 rounded-xl text-sm w-full">
+                            Account Management
+                          </li>
+                        </Link>
+                        <Link href="/growth-management">
+                          <li className="p-2 hover:bg-gray-500 hover:bg-opacity-25 rounded-xl text-sm w-full">
+                            Growth Management
+                          </li>
+                        </Link>
+                        <Link href="/faqs">
+                          <li className="p-2 hover:bg-gray-500 hover:bg-opacity-25 rounded-xl text-sm w-full">
+                            FAQs
+                          </li>
+                        </Link>
+                        <Link href="/case-studies">
+                          <li className="p-2 hover:bg-gray-500 hover:bg-opacity-25 rounded-xl text-sm w-full">
+                            Case Studies
+                          </li>
+                        </Link>
+                      </ul>
+                    </motion.div>
                   </li>
-                  <li className="p-4 hover:bg-gray-500 hover:bg-opacity-25 rounded-xl w-full flex flex-row items-baseline space-x-3">
-                    <span className="text-sm font-semibold ">02. </span>{" "}
-                    <span className="font-bold tracking-wide">Management</span>
-                  </li>
-                  <li className="p-4 hover:bg-gray-500 hover:bg-opacity-25 rounded-xl w-full flex flex-row items-baseline space-x-3">
-                    <span className="text-sm font-semibold ">03. </span>{" "}
-                    <span className="font-bold tracking-wide">About</span>
-                  </li>
-                  <li className="p-4 hover:bg-gray-500 hover:bg-opacity-25 rounded-xl w-full flex flex-row items-baseline space-x-3">
-                    <span className="text-sm font-semibold ">04. </span>{" "}
-                    <span className="font-bold tracking-wide">Blogs</span>
-                  </li>
-                  <li className="p-4 hover:bg-gray-500 hover:bg-opacity-25 rounded-xl w-full flex flex-row items-baseline space-x-3">
-                    <span className="text-sm font-semibold ">05. </span>{" "}
-                    <span className="font-bold tracking-wide">Contact</span>
-                  </li>
+                  <Link href="/about">
+                    <li className="p-4 hover:bg-gray-500 hover:bg-opacity-25 rounded-xl w-full flex flex-row items-baseline space-x-3">
+                      <span className="text-sm font-semibold ">03. </span>{" "}
+                      <span className="font-bold tracking-wide">About</span>
+                    </li>
+                  </Link>
+                  <Link href="/blog">
+                    <li className="p-4 hover:bg-gray-500 hover:bg-opacity-25 rounded-xl w-full flex flex-row items-baseline space-x-3">
+                      <span className="text-sm font-semibold ">04. </span>{" "}
+                      <span className="font-bold tracking-wide">Blogs</span>
+                    </li>
+                  </Link>
+                  <Link href="contact-us">
+                    <li className="p-4 hover:bg-gray-500 hover:bg-opacity-25 rounded-xl w-full flex flex-row items-baseline space-x-3">
+                      <span className="text-sm font-semibold ">05. </span>{" "}
+                      <span className="font-bold tracking-wide">Contact</span>
+                    </li>
+                  </Link>
                 </ul>
               </div>
             </div>
