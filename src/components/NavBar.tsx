@@ -15,9 +15,11 @@ import {
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
 import { useSessionContext } from "@supabase/auth-helpers-react";
+import { usePathname } from "next/navigation";
 
 const Navbar = () => {
   const { session } = useSessionContext();
+  const pathname = usePathname();
 
   const user = session?.user;
 
@@ -54,6 +56,10 @@ const Navbar = () => {
       document.body.classList.remove("overflow-hidden");
     }
   }, [isOverlayOpen]);
+
+  useEffect(() => {
+    setOverlayOpen(false);
+  }, [pathname]);
 
   const handleOverlayToggle = () => {
     setOverlayOpen(!isOverlayOpen);
@@ -241,10 +247,32 @@ const Navbar = () => {
                       <span className="font-bold tracking-wide">Blogs</span>
                     </li>
                   </Link>
-                  <Link href="contact-us">
+                  <Link href="/contact-us">
                     <li className="p-4 hover:bg-gray-500 hover:bg-opacity-25 rounded-xl w-full flex flex-row items-baseline space-x-3">
                       <span className="text-sm font-semibold ">05. </span>{" "}
                       <span className="font-bold tracking-wide">Contact</span>
+                    </li>
+                  </Link>
+                  <Link href="/login">
+                    <li className="p-4 hover:scale-110 bg-emerald-500 transition duration-200 ease-in-out rounded-xl w-full flex flex-row items-center space-x-3">
+                      <span className="font-bold tracking-wide">Login</span>
+                      <span className="text-sm font-semibold ">
+                        {" "}
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke-width="1.5"
+                          stroke="currentColor"
+                          className="w-6 h-6"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"
+                          />
+                        </svg>
+                      </span>{" "}
                     </li>
                   </Link>
                 </ul>
