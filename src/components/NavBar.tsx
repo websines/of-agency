@@ -149,7 +149,7 @@ const Navbar = () => {
                   </Link>
                 </NavigationMenuItem>
                 <NavigationMenuItem className="hover:bg-gray-600 rounded-[10px] hover:bg-opacity-20 text-black">
-                  <Link href="/#slide-3">
+                  <Link href="/about">
                     <NavigationMenuLink
                       className={navigationMenuTriggerStyle()}
                     >
@@ -180,7 +180,7 @@ const Navbar = () => {
           </ul>
         </div>
         <Link
-          href="/"
+          href="/contact-us"
           className="px-8 w-[60%] sm:w-auto py-4 bg-black rounded-lg text-white font-semibold hover:bg-blue-600  text-sm transition duration-200 ease-in-out hover:scale-105 flex flex-row items-center justify-center"
         >
           Apply Now
