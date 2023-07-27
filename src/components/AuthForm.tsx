@@ -24,7 +24,17 @@ export default function AuthForm() {
     <Auth
       supabaseClient={supabaseClient}
       magicLink
-      appearance={{ theme: ThemeSupa }}
+      appearance={{
+        theme: ThemeSupa,
+        variables: {
+          default: {
+            colors: {
+              brand: "#2563eb",
+              brandAccent: "#22d3ee",
+            },
+          },
+        },
+      }}
       theme="light"
       providers={[]}
       redirectTo="/auth/callback"

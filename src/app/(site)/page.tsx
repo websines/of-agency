@@ -15,6 +15,7 @@ export default function Home() {
           autoPlay
           loop
           muted
+          playsInline
         >
           <source src="/hero.mp4" type="video/mp4" />
         </video>
@@ -26,7 +27,7 @@ export default function Home() {
             ELITE MODEL AGENCY. <br />
             THE ONLYFANS AGENCY BEHIND THE TOP 0.1%
           </h1>
-          <p className="mt-6 font-medium text-white text-xs">
+          <p className="mt-6 font-medium text-white text-xs text-center">
             *EMA Onlyfans Management contracts guarantee 6 figures annually.
           </p>
           <Link
@@ -38,7 +39,7 @@ export default function Home() {
 
           <Link
             href="#slide-2"
-            className="hidden sm:block w-16 h-16 rounded-full border-2 border-black relative mt-8 mx-4 hover:bg-blue-600 hover:border-white hover:text-white"
+            className="hidden sm:block w-16 h-16 rounded-full border-2 border-white relative mt-8 mx-4 hover:bg-blue-600 hover:border-white hover:text-white"
           >
             <span>
               <svg
@@ -47,7 +48,7 @@ export default function Home() {
                 viewBox="0 0 24 24"
                 stroke-width="1.5"
                 stroke="currentColor"
-                className="w-6 h-6 absolute top-[20px] left-[18px]"
+                className="w-6 h-6 absolute top-[20px] left-[18px] text-white"
               >
                 <path
                   stroke-linecap="round"
@@ -59,6 +60,7 @@ export default function Home() {
           </Link>
         </div>
       </section>
+      <div className="w-full hidden sm:block p-16 bg-black"></div>
       <section
         id="slide-2"
         className="hidden sm:block w-full min-h-screen relative"
@@ -128,6 +130,7 @@ export default function Home() {
           </div>
         </div>
       </section>
+      <div className="w-full hidden sm:block p-16 bg-black"></div>
       <section
         id="slide-3"
         className="hidden sm:block w-full min-h-screen relative"

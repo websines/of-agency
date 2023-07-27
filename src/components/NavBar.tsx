@@ -116,8 +116,8 @@ const Navbar = () => {
                     </NavigationMenuLink>
                   </Link>
                 </NavigationMenuItem>
-                <NavigationMenuItem>
-                  <NavigationMenuTrigger>Management</NavigationMenuTrigger>
+                <NavigationMenuItem className="hover:bg-gray-600 rounded-[10px] hover:bg-opacity-20 text-black">
+                  {/* <NavigationMenuTrigger>Management</NavigationMenuTrigger>
                   <NavigationMenuContent className="bg-white">
                     <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
                       {components.map((component) => (
@@ -130,10 +130,26 @@ const Navbar = () => {
                         </ListItem>
                       ))}
                     </ul>
-                  </NavigationMenuContent>
+                  </NavigationMenuContent> */}
+                  <Link href="/#slide-2">
+                    <NavigationMenuLink
+                      className={navigationMenuTriggerStyle()}
+                    >
+                      Account Management
+                    </NavigationMenuLink>
+                  </Link>
                 </NavigationMenuItem>
                 <NavigationMenuItem className="hover:bg-gray-600 rounded-[10px] hover:bg-opacity-20 text-black">
-                  <Link href="/">
+                  <Link href="/#slide-3">
+                    <NavigationMenuLink
+                      className={navigationMenuTriggerStyle()}
+                    >
+                      Growth Management
+                    </NavigationMenuLink>
+                  </Link>
+                </NavigationMenuItem>
+                <NavigationMenuItem className="hover:bg-gray-600 rounded-[10px] hover:bg-opacity-20 text-black">
+                  <Link href="/#slide-3">
                     <NavigationMenuLink
                       className={navigationMenuTriggerStyle()}
                     >
@@ -142,7 +158,7 @@ const Navbar = () => {
                   </Link>
                 </NavigationMenuItem>
                 <NavigationMenuItem className="hover:bg-gray-600 rounded-[10px] hover:bg-opacity-20 text-black">
-                  <Link href="/">
+                  <Link href="/blog">
                     <NavigationMenuLink
                       className={navigationMenuTriggerStyle()}
                     >
@@ -151,7 +167,7 @@ const Navbar = () => {
                   </Link>
                 </NavigationMenuItem>
                 <NavigationMenuItem className="hover:bg-gray-600 rounded-[10px] hover:bg-opacity-20 text-black">
-                  <Link href="/">
+                  <Link href="/contact-us">
                     <NavigationMenuLink
                       className={navigationMenuTriggerStyle()}
                     >
@@ -165,7 +181,7 @@ const Navbar = () => {
         </div>
         <Link
           href="/"
-          className="px-8 w-[60%] sm:w-auto py-4 bg-black rounded-lg text-white font-semibold hover:bg-emerald-600 hover:text-black text-sm transition duration-200 ease-in-out hover:scale-105 flex flex-row items-center justify-center"
+          className="px-8 w-[60%] sm:w-auto py-4 bg-black rounded-lg text-white font-semibold hover:bg-blue-600  text-sm transition duration-200 ease-in-out hover:scale-105 flex flex-row items-center justify-center"
         >
           Apply Now
         </Link>
@@ -254,7 +270,7 @@ const Navbar = () => {
                     </li>
                   </Link>
                   <Link href="/login">
-                    <li className="p-4 hover:scale-110 bg-emerald-500 transition duration-200 ease-in-out rounded-xl w-full flex flex-row items-center space-x-3">
+                    <li className="p-4 hover:scale-110 bg-blue-600 transition duration-200 ease-in-out rounded-xl w-full flex flex-row items-center space-x-3">
                       <span className="font-bold tracking-wide">Login</span>
                       <span className="text-sm font-semibold ">
                         {" "}
