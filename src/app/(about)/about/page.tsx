@@ -46,7 +46,7 @@ const page = () => {
           </Link>
         </div>
       </section>
-      <section className="p-4 sm:p-16 min-h-screen w-full">
+      <section className="p-4 sm:p-16 min-h-screen w-full bg-white">
         <div className="flex flex-col p-8 mx-auto items-center justify-center">
           <h1 className="font-extrabold text-3xl sm:text-4xl my-2">About Us</h1>
           <p className="sm:w-[80%] overflow-clip text-md font-medium p-4">

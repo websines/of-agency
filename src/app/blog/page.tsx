@@ -19,7 +19,10 @@ const page = async () => {
       <section
         className="w-full h-96 flex flex-row items-end justify-end sm:justify-start p-4 sm:py-12 sm:px-32"
         style={{
-          backgroundImage: `url('/test.jpg')`,
+          backgroundImage: `url('/img-9.jpg')`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
         }}
       >
         <div className="bg-white p-6 text-black w-full sm:h-full h-auto sm:w-[30%]">
@@ -27,12 +30,12 @@ const page = async () => {
             Account Management
           </h1>
           <p className="my-4 text-sm font-medium">
-            The EMA Account Management team is responsible for maximizing
+            The EMG Account Management team is responsible for maximizing
             account goals and efficiently executing vital daily account tasks.
           </p>
           <Link
-            href="/contact"
-            className="my-4 px-6 py-2 sm:py-4 font-semibold flex flex-row space-x-2 border-b-2 border-orange-300 max-w-[80%] hover:scale-90 duration-300 ease-in-out"
+            href="/contact-us"
+            className="my-4 px-6 py-2 sm:py-4 font-semibold flex flex-row space-x-2 border-b-2 border-cyan-300 max-w-[80%] hover:scale-90 duration-300 ease-in-out"
           >
             Get Started Now
             <span>
