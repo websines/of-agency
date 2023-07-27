@@ -24,7 +24,7 @@ const Tabs = () => {
             <div className="mt-8 ">
               <Link
                 href="/faqs"
-                className="my-4 px-6 py-4 font-semibold flex flex-row space-x-2 border-b-2 border-orange-300 w-[60%] sm:max-w-[80%] hover:scale-90 duration-300 ease-in-out"
+                className="my-4 px-6 py-4 font-semibold flex flex-row space-x-2 border-b-2 border-cyan-300 w-[60%] sm:max-w-[80%] hover:scale-90 duration-300 ease-in-out"
               >
                 Learn More
                 <span>

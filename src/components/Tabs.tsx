@@ -13,7 +13,7 @@ const Tabs = () => {
           <div className="relative z-10 lg:grid lg:grid-cols-12 lg:gap-16 lg:items-center">
             <div className="mb-10 lg:mb-0 lg:col-span-6 lg:col-start-8 lg:order-2">
               <h2 className="text-2xl text-gray-800 font-bold sm:text-3xl dark:text-gray-200">
-                Fully customizable rules to match your unique needs
+                Best in class services curated for your success
               </h2>
 
               <nav
@@ -43,11 +43,12 @@ const Tabs = () => {
                     </svg>
                     <span className="grow ml-6">
                       <span className="block text-lg font-semibold hs-tab-active:text-blue-600 text-gray-800 dark:hs-tab-active:text-blue-500 dark:text-gray-200">
-                        Advanced tools
+                        Personal Success Strategy
                       </span>
                       <span className="block mt-1 text-gray-800 dark:hs-tab-active:text-gray-200 dark:text-gray-200">
-                        Use Preline thoroughly thought and automated libraries
-                        to manage your businesses.
+                        Together with you, we analyze your current situation and
+                        right working environment so that we can support you as
+                        effectively and efficiently as possible
                       </span>
                     </span>
                   </span>
@@ -77,11 +78,12 @@ const Tabs = () => {
                     </svg>
                     <span className="grow ml-6">
                       <span className="block text-lg font-semibold hs-tab-active:text-blue-600 text-gray-800 dark:hs-tab-active:text-blue-500 dark:text-gray-200">
-                        Smart dashboards
+                        OnlyFans Account Management
                       </span>
                       <span className="block mt-1 text-gray-800 dark:hs-tab-active:text-gray-200 dark:text-gray-200">
-                        Quickly Preline sample components, copy-paste codes, and
-                        start right off.
+                        Content and Asset Plan Management. You share your
+                        content with us, we take care of posting, copywriting,
+                        Hashtag, and monetization
                       </span>
                     </span>
                   </span>
@@ -108,11 +110,14 @@ const Tabs = () => {
                     </svg>
                     <span className="grow ml-6">
                       <span className="block text-lg font-semibold hs-tab-active:text-blue-600 text-gray-800 dark:hs-tab-active:text-blue-500 dark:text-gray-200">
-                        Powerful features
+                        Channel Growth and Retention Management
                       </span>
                       <span className="block mt-1 text-gray-800 dark:hs-tab-active:text-gray-200 dark:text-gray-200">
-                        Reduce time and effort on building modern look design
-                        with Preline only.
+                        To accomplish a healthy long-term, financially
+                        successful account, it is vital to constantly gain new
+                        fans while also retaining existing ones. We identify the
+                        right tools for you and continuously adapt the
+                        strategies to acquire new Fans and retain existing ones.
                       </span>
                     </span>
                   </span>

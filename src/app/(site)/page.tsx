@@ -194,13 +194,12 @@ export default function Home() {
           />
           <div className="my-4 flex flex-col space-y-4">
             <h1 className="font-extrabold text-2xl tracking-tighter uppercase">
-              Where Viral and Practical Meet
+              ACCOUNT MANAGEMENT, <br /> WITH BENEFITS
             </h1>
-            <p className="text-md tracking-tight font-light">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit,
-              quae? Illum corporis libero iste consequuntur ut nisi tempore.
-              Similique reprehenderit consectetur, porro dolorum quia esse
-              voluptate aliquid. Atque, vitae ratione.
+            <p className="text-md tracking-tight font-normal">
+              Unrivaled Onlyfans Managers. Unparalleled Account Strategy. A
+              process that inspires you to achieve and a consistency that keeps
+              your account earning 24/7.
             </p>
           </div>
           <div className="my-2">
@@ -238,13 +237,12 @@ export default function Home() {
           />
           <div className="my-4 flex flex-col space-y-4">
             <h1 className="font-extrabold text-2xl tracking-tighter uppercase">
-              Where Viral and Practical Meet
+              WHERE VIRAL & PRACTICAL MEET
             </h1>
-            <p className="text-md tracking-tight font-light">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit,
-              quae? Illum corporis libero iste consequuntur ut nisi tempore.
-              Similique reprehenderit consectetur, porro dolorum quia esse
-              voluptate aliquid. Atque, vitae ratione.
+            <p className="text-md tracking-tight font-normal">
+              Fueled by industry experts, the EMG Onlyfans promotion team
+              provides unrivaled programs to gain viral exposure, and long-term
+              organic strategies…keeping your momentum performing at its finest.
             </p>
           </div>
           <div className="my-2">
