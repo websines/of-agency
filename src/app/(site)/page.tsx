@@ -10,33 +10,35 @@ export default function Home() {
   return (
     <main className="bg-white">
       <section id="slide-1" className="w-full min-h-screen relative">
-        <Image
-          src="/test.jpg"
-          alt="test"
-          fill
-          className="absolute inset-0 object-cover"
-        />
-        <div className="relative z-10 flex flex-col items-start justify-start sm:w-[60%] p-16 h-full">
-          <p className="mt-12 sm:text-xl text-lg text-orange-400 font-semibold">
+        <video
+          className="absolute inset-0 w-full h-full object-cover"
+          autoPlay
+          loop
+          muted
+        >
+          <source src="/hero.mp4" type="video/mp4" />
+        </video>
+        <div className="relative z-10 flex flex-col items-center justify-center mx-auto sm:w-[60%] p-16 h-full">
+          <p className="mt-12 sm:text-xl text-lg text-center text-white font-semibold">
             The Only Professionally Accredited Onlyfans Agency by the BBB™
           </p>
-          <h1 className="text-gray-900 my-4 font-semibold text-4xl sm:text-6xl">
-            SMART ONLYFANS DEVELOPMENT. <br />― THE ONLYFANS AGENCY BEHIND THE
-            TOP 0.1%
+          <h1 className="text-blue-600 my-4 font-semibold text-center text-4xl sm:text-6xl">
+            ELITE MODEL AGENCY. <br />
+            THE ONLYFANS AGENCY BEHIND THE TOP 0.1%
           </h1>
-          <p className="mt-6 font-medium text-md sm:text-lg">
+          <p className="mt-6 font-medium text-white text-md">
             *EMA Onlyfans Management contracts guarantee 6 figures annually.
           </p>
           <Link
             href="/get-started"
-            className="sm:m-2 mt-4 px-12 py-4 sm:px-20 sm:py-6 bg-emerald-600 font-medium text-lg hover:bg-black text-white duration-300 ease-in-out"
+            className="sm:m-2 mt-4 px-12 py-4 sm:px-20 sm:py-6 bg-blue-600 font-medium text-lg hover:bg-black text-white duration-300 ease-in-out"
           >
             Get the Offer Details
           </Link>
 
           <Link
             href="#slide-2"
-            className="hidden sm:block w-16 h-16 rounded-full border-2 border-black relative mt-8 mx-4 hover:bg-black hover:border-white hover:text-white"
+            className="hidden sm:block w-16 h-16 rounded-full border-2 border-black relative mt-8 mx-4 hover:bg-blue-600 hover:border-white hover:text-white"
           >
             <span>
               <svg
@@ -62,7 +64,7 @@ export default function Home() {
         className="hidden sm:block w-full min-h-screen relative"
       >
         <Image
-          src=""
+          src="/img-1.jpg"
           alt="test"
           fill
           className="absolute inset-0 object-cover"
@@ -131,7 +133,7 @@ export default function Home() {
         className="hidden sm:block w-full min-h-screen relative"
       >
         <Image
-          src=""
+          src="/img-2.jpg"
           alt="test"
           fill
           className="absolute inset-0 object-cover"
@@ -178,11 +180,11 @@ export default function Home() {
       >
         <div className="py-2 px-6 bg-slate-100 drop-shadow-sm flex flex-col items-start justify-center">
           <Image
-            src="/test.jpg"
+            src="/img-1.jpg"
             alt="test"
-            height={250}
-            width={150}
-            className="w-full h-48"
+            height={1000}
+            width={1000}
+            className="w-full h-48 rounded"
           />
           <div className="my-4 flex flex-col space-y-4">
             <h1 className="font-extrabold text-2xl tracking-tighter uppercase">
@@ -198,7 +200,7 @@ export default function Home() {
           <div className="my-2">
             <Link
               href="/account-management"
-              className="my-4 px-6 py-4 font-semibold flex flex-row space-x-2 border-b-2 border-orange-300  hover:scale-90 duration-300 ease-in-out"
+              className="my-4 px-6 py-4 font-semibold flex flex-row space-x-2 border-b-2 border-blue-600  hover:scale-90 duration-300 ease-in-out"
             >
               View Management Benefits
               <span>
@@ -222,11 +224,11 @@ export default function Home() {
         </div>
         <div className="py-2 px-6 bg-slate-100 drop-shadow-sm flex flex-col items-start justify-center">
           <Image
-            src="/test.jpg"
+            src="/img-2.jpg"
             alt="test"
-            height={250}
-            width={150}
-            className="w-full h-48"
+            height={1000}
+            width={1000}
+            className="w-full h-48 rounded"
           />
           <div className="my-4 flex flex-col space-y-4">
             <h1 className="font-extrabold text-2xl tracking-tighter uppercase">
@@ -242,7 +244,7 @@ export default function Home() {
           <div className="my-2">
             <Link
               href="/account-management"
-              className="my-4 px-6 py-4 font-semibold flex flex-row space-x-2 border-b-2 border-orange-300  hover:scale-90 duration-300 ease-in-out"
+              className="my-4 px-6 py-4 font-semibold flex flex-row space-x-2 border-b-2 border-blue-600  hover:scale-90 duration-300 ease-in-out"
             >
               View Growth Benefits
               <span>

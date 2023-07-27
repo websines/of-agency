@@ -3,18 +3,6 @@
 import React from "react";
 import { UserNav } from "./UserNav";
 import { useSessionContext } from "@supabase/auth-helpers-react";
-import { Button } from "@/components/ui/button";
-import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogFooter,
-  DialogHeader,
-  DialogTitle,
-  DialogTrigger,
-} from "@/components/ui/dialog";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
 import { CredentialsModal } from "./CredentialsModal";
 
 const DashboardNav = () => {
@@ -23,7 +11,7 @@ const DashboardNav = () => {
     <div className="flex flex-row justify-between items-center mx-8 p-4">
       <div className="flex flex-row justify-between items-center">
         <h1 className="p-2 rounded bg-gray-300 bg-opacity-30 tracking-wide">
-          OFFNG
+          YOUR DASHBOARD
         </h1>
         <div className="z-40">
           <CredentialsModal />
