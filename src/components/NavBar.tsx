@@ -106,9 +106,8 @@ const Navbar = () => {
           ) : (
             <img
               src={"/logo-black.png"}
-              className="w-[200px] h-[50px] object-cover scale-150 sm:scale-100 "
+              className="w-[100px] h-[50px] object-fit"
               alt="logo"
-              style={{ scale: 2 }}
             />
           )}
         </div>

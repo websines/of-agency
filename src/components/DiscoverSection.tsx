@@ -11,7 +11,7 @@ const DiscoverSection = () => {
           </span>
           <div className="flex flex-col space-y-4 sm:ml-16">
             <p>
-              At EMA, we offer a comprehensive approach to account building and
+              At EMG, we offer a comprehensive approach to account building and
               growth, allowing you to explore various paths towards achieving
               your desired level of success. Our 360 approach enables you to
               optimize your account and reach your full potential on OnlyFans
@@ -29,43 +29,49 @@ const DiscoverSection = () => {
           <div
             className="col-span-1 p-4 bg-white hover:scale-110 sm:hover:scale-125 duration-300 ease-in-out flex flex-col justify-center items-center h-[400px] rounded-lg drop-shadow-md group"
             style={{
-              backgroundImage: "url('/img-1.jpg')",
+              backgroundImage: "url('/img-3.jpg')",
               backgroundSize: "cover",
               backgroundPosition: "center",
               backgroundRepeat: "no-repeat",
             }}
           >
-            <div className=" flex flex-col items-center group-hover:justify-center h-full">
+            <Link
+              href={"/account-management"}
+              className=" flex flex-col items-center group-hover:justify-center h-full"
+            >
               <span className="hidden text-lg font-bold text-white text-center translate-y-0 group-hover:block group-hover:duration-700 transition-all group-hover:ease-in-out">
                 Account Management
               </span>
               <span className="hidden text-xs font-bold text-white text-center group-hover:block group-hover:duration-300 group-hover:ease-in-out">
-                Maximizing revenue inside accounts
+                World Class Onlyfans Management
               </span>
-            </div>
+            </Link>
           </div>
           <div
             className="col-span-1 p-4 bg-white hover:scale-110 sm:hover:scale-125 duration-300 ease-in-out flex flex-col justify-center items-center h-[400px] rounded-lg drop-shadow-md group"
             style={{
-              backgroundImage: "url('/img-1.jpg')",
+              backgroundImage: "url('/img-4.jpg')",
               backgroundSize: "cover",
               backgroundPosition: "center",
               backgroundRepeat: "no-repeat",
             }}
           >
-            <div className=" flex flex-col items-center group-hover:justify-center h-full">
+            <Link
+              href={"/growth-management"}
+              className=" flex flex-col items-center group-hover:justify-center h-full"
+            >
               <span className="hidden text-lg font-bold text-white text-center translate-y-0 group-hover:block group-hover:duration-700 transition-all group-hover:ease-in-out">
-                Account Management
+                Growth Management
               </span>
               <span className="hidden text-xs font-bold text-white text-center group-hover:block group-hover:duration-300 group-hover:ease-in-out">
-                Maximizing revenue inside accounts
+                Maximizing growth inside accounts
               </span>
-            </div>
+            </Link>
           </div>
           <div
             className="col-span-1 p-4 bg-white hover:scale-110 sm:hover:scale-125 duration-300 ease-in-out flex flex-col justify-center items-center h-[400px] rounded-lg drop-shadow-md group"
             style={{
-              backgroundImage: "url('/img-1.jpg')",
+              backgroundImage: "url('/img-10.jpg')",
               backgroundSize: "cover",
               backgroundPosition: "center",
               backgroundRepeat: "no-repeat",
@@ -76,10 +82,10 @@ const DiscoverSection = () => {
               className=" flex flex-col items-center group-hover:justify-center h-full"
             >
               <span className="hidden text-lg font-bold text-white text-center translate-y-0 group-hover:block group-hover:duration-700 transition-all group-hover:ease-in-out">
-                Account Management
+                FAQs
               </span>
               <span className="hidden text-xs font-bold text-white text-center group-hover:block group-hover:duration-300 group-hover:ease-in-out">
-                Maximizing revenue inside accounts
+                Know More About Us
               </span>
             </Link>
           </div>

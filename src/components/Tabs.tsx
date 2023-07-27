@@ -130,8 +130,8 @@ const Tabs = () => {
                   >
                     <img
                       className="shadow-xl shadow-gray-200 rounded-xl dark:shadow-gray-900/[.2]"
-                      src="https://images.unsplash.com/photo-1605629921711-2f6b00c6bbf4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&h=1220&q=80"
-                      alt="Image Description"
+                      src="/img-5.jpg"
+                      alt="image"
                     />
                   </div>
 
@@ -143,8 +143,8 @@ const Tabs = () => {
                   >
                     <img
                       className="shadow-xl shadow-gray-200 rounded-xl dark:shadow-gray-900/[.2]"
-                      src="https://images.unsplash.com/photo-1665686306574-1ace09918530?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&h=1220&q=80"
-                      alt="Image Description"
+                      src="/img-6.jpg"
+                      alt="image"
                     />
                   </div>
 
@@ -156,8 +156,8 @@ const Tabs = () => {
                   >
                     <img
                       className="shadow-xl shadow-gray-200 rounded-xl dark:shadow-gray-900/[.2]"
-                      src="https://images.unsplash.com/photo-1598929213452-52d72f63e307?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&h=1220&q=80"
-                      alt="Image Description"
+                      src="/img-10.jpg"
+                      alt="image"
                     />
                   </div>
                 </div>

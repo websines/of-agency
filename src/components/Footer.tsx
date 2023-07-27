@@ -87,7 +87,7 @@ const Footer = () => {
         </div>
       ) : (
         <div className="">
-          <footer className="bg-gray-900 sm:p-0 p-4">
+          <footer className="bg-black sm:p-0 p-4">
             <div className="max-w-[85rem] py-10 px-4 sm:px-6 lg:px-8 lg:pt-20 mx-auto">
               <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6">
                 <div className="col-span-full lg:col-span-1">
@@ -96,36 +96,36 @@ const Footer = () => {
                     href="#"
                     aria-label="Brand"
                   >
-                    EMG
+                    <img src="/logo-white.png" className="scale-90" />
                   </a>
                 </div>
 
                 <div className="col-span-1">
-                  <h4 className="font-semibold text-gray-100">Product</h4>
+                  <h4 className="font-semibold text-gray-100">Services</h4>
 
                   <div className="mt-3 grid space-y-3">
                     <p>
                       <a
                         className="inline-flex gap-x-2 text-gray-400 hover:text-gray-200"
-                        href="#"
+                        href="/account-management"
                       >
-                        Pricing
+                        Account Management
                       </a>
                     </p>
                     <p>
                       <a
                         className="inline-flex gap-x-2 text-gray-400 hover:text-gray-200"
-                        href="#"
+                        href="/growth-management"
                       >
-                        Changelog
+                        Growth Management
                       </a>
                     </p>
                     <p>
                       <a
                         className="inline-flex gap-x-2 text-gray-400 hover:text-gray-200"
-                        href="#"
+                        href="/faqs"
                       >
-                        Docs
+                        FAQ
                       </a>
                     </p>
                   </div>
@@ -138,7 +138,7 @@ const Footer = () => {
                     <p>
                       <a
                         className="inline-flex gap-x-2 text-gray-400 hover:text-gray-200"
-                        href="#"
+                        href="/about"
                       >
                         About us
                       </a>
@@ -146,7 +146,7 @@ const Footer = () => {
                     <p>
                       <a
                         className="inline-flex gap-x-2 text-gray-400 hover:text-gray-200"
-                        href="#"
+                        href="/blog"
                       >
                         Blog
                       </a>
@@ -154,18 +154,10 @@ const Footer = () => {
                     <p>
                       <a
                         className="inline-flex gap-x-2 text-gray-400 hover:text-gray-200"
-                        href="#"
+                        href="/contact-us"
                       >
-                        Careers
+                        Contact
                       </a>{" "}
-                    </p>
-                    <p>
-                      <a
-                        className="inline-flex gap-x-2 text-gray-400 hover:text-gray-200"
-                        href="#"
-                      >
-                        Customers
-                      </a>
                     </p>
                   </div>
                 </div>
