@@ -19,21 +19,21 @@ export default function Home() {
           <source src="/hero.mp4" type="video/mp4" />
         </video>
         <div className="relative z-10 flex flex-col items-center justify-center mx-auto sm:w-[60%] p-16 h-full">
-          <p className="mt-12 sm:text-xl text-lg text-center text-white font-semibold">
+          <p className="mt-12 sm:text-xl text-md text-center text-white font-semibold">
             The Only Professionally Accredited Onlyfans Agency by the BBB™
           </p>
           <h1 className="text-blue-600 my-4 font-semibold text-center text-4xl sm:text-6xl">
             ELITE MODEL AGENCY. <br />
             THE ONLYFANS AGENCY BEHIND THE TOP 0.1%
           </h1>
-          <p className="mt-6 font-medium text-white text-md">
+          <p className="mt-6 font-medium text-white text-xs">
             *EMA Onlyfans Management contracts guarantee 6 figures annually.
           </p>
           <Link
             href="/get-started"
             className="sm:m-2 mt-4 px-12 py-4 sm:px-20 sm:py-6 bg-blue-600 font-medium text-lg hover:bg-black text-white duration-300 ease-in-out"
           >
-            Get the Offer Details
+            Get Started!
           </Link>
 
           <Link
