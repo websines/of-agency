@@ -1,13 +1,7 @@
+"use client";
 import DiscoverSection from "@/components/DiscoverSection";
 import Link from "next/link";
-import React from "react";
-
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
+import React, { useEffect } from "react";
 
 const page = () => {
   const ACCORDION_CONTENT = [
@@ -52,13 +46,16 @@ const page = () => {
       desc: "The client manager is the point of contact between the Creator and the rest of the operations team.",
     },
   ];
+  useEffect(() => {
+    import("preline");
+  }, []);
 
   return (
     <div>
       <section
         className="w-full h-96 flex flex-row items-end justify-end sm:justify-start p-4 sm:py-12 sm:px-32"
         style={{
-          backgroundImage: `url('/test.jpg')`,
+          backgroundImage: `url('/img-1.jpg')`,
         }}
       >
         <div className="bg-white p-6 text-black w-full sm:h-full h-auto sm:w-[30%]">
@@ -93,7 +90,7 @@ const page = () => {
           </Link>
         </div>
       </section>
-      <div className="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
+      <div className="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto bg-white">
         <div className="max-w-2xl mx-auto text-center mb-10 lg:mb-14">
           <h2 className="text-2xl font-bold md:text-4xl md:leading-tight dark:text-white">
             Your questions, answered
@@ -103,7 +100,7 @@ const page = () => {
             <span>
               <Link
                 href="/contact-us"
-                className="rounded-xl bg-cyan-100 py-2 transition duration-150 ease-in-out px-4 hover:bg-black hover:text-white"
+                className="py-2 transition duration-150 ease-in-out px-auto hover:underline text-blue-600 hover:text-black"
               >
                 {" "}
                 contact us
