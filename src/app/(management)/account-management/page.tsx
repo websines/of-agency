@@ -4,7 +4,7 @@ import Link from "next/link";
 import React from "react";
 
 const page = () => {
-  const SECTIONS_CONTENT = [
+  const SECTIONS_CONTENT_1 = [
     {
       id: 1,
       title: "Client Manager",
@@ -12,13 +12,44 @@ const page = () => {
     },
     {
       id: 2,
-      title: "Client Manager",
-      desc: "The client manager is the point of contact between the Creator and the rest of the operations team.",
+      title: "Account Manager",
+      desc: "Every creator we work with has an assigned account manager that ensures your account stays on track with identified goals.",
     },
     {
       id: 3,
-      title: "Client Manager",
-      desc: "The client manager is the point of contact between the Creator and the rest of the operations team.",
+      title: "Dedicated Account Staff",
+      desc: "What significantly sets EMA apart is a dedicated team. Three – five staff members are focused on 1 account.",
+    },
+  ];
+
+  const SECTIONS_CONTENT_2 = [
+    {
+      id: 1,
+      title: "Caption Creation",
+      desc: "The account team will carefully curate the best performing captions on all content types for the highest open/sell rates.",
+    },
+    {
+      id: 2,
+      title: "Selling Content at Scale",
+      desc: "The account team focuses on publishing content to produce the highest sales. This includes story, wall posts, PPV, and 1-on-1 content selling.",
+    },
+    {
+      id: 3,
+      title: "Custom Requests",
+      desc: "When customs are offered, the account team will manage the process of acquiring a high price and communicating the custom request to the creator.",
+    },
+  ];
+
+  const SECTIONS_CONTENT_3 = [
+    {
+      id: 1,
+      title: "Realtime Metrics",
+      desc: "The operations team uses advanced software that ties directly into Onlyfans to provide the team with real-time fan data that identifies dozens of data points allowing the team to make day to day adjustments to strategy.",
+    },
+    {
+      id: 2,
+      title: "Financial Projections",
+      desc: "EMA monitors financial projections daily, based on historical data on an account, to ensure continued account success and identify roadblocks far in advance.",
     },
   ];
 
@@ -72,7 +103,7 @@ const page = () => {
               The TEAM.
             </h2>
             <div className="flex flex-col sm:flex-row">
-              {SECTIONS_CONTENT.map((content) => (
+              {SECTIONS_CONTENT_1.map((content) => (
                 <div className="my-4" key={content.id}>
                   <TextBox title={content.title} desc={content.desc} />
                 </div>
@@ -81,10 +112,10 @@ const page = () => {
           </div>
           <div className="flex flex-col my-8">
             <h2 className="uppercase text-3xl font-extrabold my-8">
-              The TEAM.
+              The DAILY OPERATIONS.
             </h2>
             <div className="flex flex-col sm:flex-row">
-              {SECTIONS_CONTENT.map((content) => (
+              {SECTIONS_CONTENT_2.map((content) => (
                 <div className="my-4" key={content.id}>
                   <TextBox title={content.title} desc={content.desc} />
                 </div>
@@ -93,10 +124,10 @@ const page = () => {
           </div>
           <div className="flex flex-col mt-8">
             <h2 className="uppercase text-3xl font-extrabold my-8">
-              The TEAM.
+              SOFTWARE.
             </h2>
             <div className="flex flex-col sm:flex-row">
-              {SECTIONS_CONTENT.map((content) => (
+              {SECTIONS_CONTENT_3.map((content) => (
                 <div key={content.id}>
                   <TextBox title={content.title} desc={content.desc} />
                 </div>

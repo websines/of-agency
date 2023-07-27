@@ -4,16 +4,29 @@ import Link from "next/link";
 import React from "react";
 
 const page = () => {
-  const GROWTH_CONTENT = [
+  const GROWTH_CONTENT_1 = [
     {
       id: 1,
-      title: "Client Manager",
-      desc: "The client manager is the point of contact between the Creator and the rest of the operations team.",
+      title: "Paid Campaigns",
+      desc: "EMG is uniquely partnered with marketing firms and platforms to boost visibility instantly.",
     },
     {
       id: 2,
-      title: "Client Manager",
-      desc: "The client manager is the point of contact between the Creator and the rest of the operations team.",
+      title: "Paid Shoutouts",
+      desc: "EMG has a large network of Onlyfans creators that actively seek to sell their fans to other creators, for a fee.",
+    },
+  ];
+
+  const GROWTH_CONTENT_2 = [
+    {
+      id: 1,
+      title: "Organic Viral Growth",
+      desc: "The EMG promotion team has a systemized solution to get clips to gain organic viral attraction on Tiktok and Instagram Reels that are then converted to Onlyfans subscribers.",
+    },
+    {
+      id: 2,
+      title: "Mutual Collaborations",
+      desc: "EMG has a large network of Onlyfans creators that actively seek similarly sized accounts to cross promote in a shout for shout strategy.",
     },
   ];
 
@@ -64,10 +77,10 @@ const page = () => {
         <div className="w-[80%] flex flex-col p-4 items-start justify-start">
           <div className="flex flex-col mb-8">
             <h2 className="uppercase text-3xl font-extrabold mb-8">
-              The TEAM.
+              PAID PROMO.
             </h2>
             <div className="flex flex-col sm:flex-row">
-              {GROWTH_CONTENT.map((content) => (
+              {GROWTH_CONTENT_1.map((content) => (
                 <div className="my-4" key={content.id}>
                   <TextBox title={content.title} desc={content.desc} />
                 </div>
@@ -76,10 +89,10 @@ const page = () => {
           </div>
           <div className="flex flex-col my-8">
             <h2 className="uppercase text-3xl font-extrabold mb-8">
-              The TEAM.
+              FREE PROMO.
             </h2>
             <div className="flex flex-col sm:flex-row">
-              {GROWTH_CONTENT.map((content) => (
+              {GROWTH_CONTENT_2.map((content) => (
                 <div className="my-4" key={content.id}>
                   <TextBox title={content.title} desc={content.desc} />
                 </div>
