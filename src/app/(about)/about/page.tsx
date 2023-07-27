@@ -8,7 +8,10 @@ const page = () => {
       <section
         className="w-full h-96 flex flex-row items-end justify-end sm:justify-start p-4 sm:py-12 sm:px-32"
         style={{
-          backgroundImage: `url('/test.jpg')`,
+          backgroundImage: `url('/img-3.jpg')`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
         }}
       >
         <div className="bg-white p-6 text-black w-full sm:h-full h-auto sm:w-[30%]">
@@ -16,7 +19,7 @@ const page = () => {
             Account Management
           </h1>
           <p className="my-4 text-sm font-medium">
-            The EMA Account Management team is responsible for maximizing
+            The EMG Account Management team is responsible for maximizing
             account goals and efficiently executing vital daily account tasks.
           </p>
           <Link
@@ -41,6 +44,42 @@ const page = () => {
               </svg>
             </span>
           </Link>
+        </div>
+      </section>
+      <section className="p-4 sm:p-16 min-h-screen w-full">
+        <div className="flex flex-col p-8 mx-auto items-center justify-center">
+          <h1 className="font-extrabold text-3xl sm:text-4xl my-2">About Us</h1>
+          <p className="sm:w-[80%] overflow-clip text-md font-medium p-4">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquid
+            architecto deserunt et id, impedit quibusdam voluptates eaque sit
+            tempore omnis cumque, consequuntur dolore quisquam labore soluta
+            accusantium aliquam voluptatum itaque?Lorem ipsum dolor sit amet
+            consectetur adipisicing elit. Est vel assumenda mollitia minima unde
+            quia porro hic dolores, autem ducimus nostrum, quidem voluptatum
+            facere aspernatur iusto modi architecto saepe explicabo?Lorem ipsum
+            dolor sit amet consectetur adipisicing elit. Ipsa tenetur a
+            cupiditate! Aperiam maxime, cupiditate nostrum, suscipit ex sequi
+            sed eius facere soluta veritatis inventore cumque eaque blanditiis!
+            Velit, ullam.
+          </p>
+        </div>
+        <div className="flex flex-col p-8 mx-auto items-center justify-center">
+          <h1 className="font-extrabold text-3xl sm:text-4xl my-2">
+            Our Vision
+          </h1>
+          <p className="sm:w-[80%] overflow-clip text-md font-medium p-4">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquid
+            architecto deserunt et id, impedit quibusdam voluptates eaque sit
+            tempore omnis cumque, consequuntur dolore quisquam labore soluta
+            accusantium aliquam voluptatum itaque?Lorem ipsum dolor sit amet
+            consectetur adipisicing elit. Est vel assumenda mollitia minima unde
+            quia porro hic dolores, autem ducimus nostrum, quidem voluptatum
+            facere aspernatur iusto modi architecto saepe explicabo?Lorem ipsum
+            dolor sit amet consectetur adipisicing elit. Ipsa tenetur a
+            cupiditate! Aperiam maxime, cupiditate nostrum, suscipit ex sequi
+            sed eius facere soluta veritatis inventore cumque eaque blanditiis!
+            Velit, ullam.
+          </p>
         </div>
       </section>
       <DiscoverSection />
