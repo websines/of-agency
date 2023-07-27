@@ -24,10 +24,7 @@ export function UserNav({ email }: NavProps) {
           className="relative h-12 w-12 rounded-full bg-gray-100"
         >
           <Avatar className="h-12 w-12">
-            <AvatarImage
-              src="https://public.onlyfans.com/files/k/ko/kon/konubetjup5ushmbht6aolz8v16rxix01674651010/287357099/avatar.jpg"
-              alt="@shadcn"
-            />
+            <AvatarImage src="/woman.png" alt="avatar" />
             <AvatarFallback>TS</AvatarFallback>
           </Avatar>
         </Button>
@@ -39,7 +36,7 @@ export function UserNav({ email }: NavProps) {
       >
         <DropdownMenuLabel className="font-normal">
           <div className="flex flex-col space-y-1">
-            <p className="text-sm font-medium leading-none">Tamasaiya</p>
+            <p className="text-sm font-medium leading-none">Profile</p>
             <p className="text-xs leading-none text-muted-foreground">
               {email}
             </p>

@@ -11,7 +11,7 @@ const DashboardNav = () => {
     <div className="flex flex-row justify-between items-center mx-8 p-4">
       <div className="flex flex-row justify-between items-center">
         <h1 className="p-2 rounded bg-gray-300 bg-opacity-30 tracking-wide">
-          YOUR DASHBOARD
+          EMG
         </h1>
         <div className="z-40">
           <CredentialsModal />

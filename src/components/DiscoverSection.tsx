@@ -18,7 +18,7 @@ const DiscoverSection = () => {
               and other NSFW platforms.
             </p>
             <Link
-              href="/get-started"
+              href="/contact-us"
               className="mt-8 px-6 py-2 border-b-2 border-orange-300 hover:scale-90 duration-300 ease-in-out w-[75%] sm:w-[40%]"
             >
               EMA Model Application
@@ -26,35 +26,62 @@ const DiscoverSection = () => {
           </div>
         </div>
         <div className="mt-16 grid grid-cols-1 gap-12 sm:gap-12 sm:grid-cols-3 sm:p-20">
-          <div className="col-span-1 p-4 bg-white hover:scale-110 sm:hover:scale-125 duration-300 ease-in-out flex flex-col justify-center items-center h-[400px] rounded-lg drop-shadow-md group">
+          <div
+            className="col-span-1 p-4 bg-white hover:scale-110 sm:hover:scale-125 duration-300 ease-in-out flex flex-col justify-center items-center h-[400px] rounded-lg drop-shadow-md group"
+            style={{
+              backgroundImage: "url('/img-1.jpg')",
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+              backgroundRepeat: "no-repeat",
+            }}
+          >
             <div className=" flex flex-col items-center group-hover:justify-center h-full">
-              <span className="hidden text-lg font-bold text-black text-center translate-y-0 group-hover:block group-hover:duration-700 transition-all group-hover:ease-in-out">
+              <span className="hidden text-lg font-bold text-white text-center translate-y-0 group-hover:block group-hover:duration-700 transition-all group-hover:ease-in-out">
                 Account Management
               </span>
-              <span className="hidden text-xs font-bold text-black text-center group-hover:block group-hover:duration-300 group-hover:ease-in-out">
+              <span className="hidden text-xs font-bold text-white text-center group-hover:block group-hover:duration-300 group-hover:ease-in-out">
                 Maximizing revenue inside accounts
               </span>
             </div>
           </div>
-          <div className="col-span-1 p-4 bg-white hover:scale-110 sm:hover:scale-125 duration-300 ease-in-out flex flex-col justify-center items-center h-[400px] rounded-lg drop-shadow-md group">
+          <div
+            className="col-span-1 p-4 bg-white hover:scale-110 sm:hover:scale-125 duration-300 ease-in-out flex flex-col justify-center items-center h-[400px] rounded-lg drop-shadow-md group"
+            style={{
+              backgroundImage: "url('/img-1.jpg')",
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+              backgroundRepeat: "no-repeat",
+            }}
+          >
             <div className=" flex flex-col items-center group-hover:justify-center h-full">
-              <span className="hidden text-lg font-bold text-black text-center translate-y-0 group-hover:block group-hover:duration-700 transition-all group-hover:ease-in-out">
+              <span className="hidden text-lg font-bold text-white text-center translate-y-0 group-hover:block group-hover:duration-700 transition-all group-hover:ease-in-out">
                 Account Management
               </span>
-              <span className="hidden text-xs font-bold text-black text-center group-hover:block group-hover:duration-300 group-hover:ease-in-out">
+              <span className="hidden text-xs font-bold text-white text-center group-hover:block group-hover:duration-300 group-hover:ease-in-out">
                 Maximizing revenue inside accounts
               </span>
             </div>
           </div>
-          <div className="col-span-1 p-4 bg-white hover:scale-110 sm:hover:scale-125 duration-300 ease-in-out flex flex-col justify-center items-center h-[400px] rounded-lg drop-shadow-md group">
-            <div className=" flex flex-col items-center group-hover:justify-center h-full">
-              <span className="hidden text-lg font-bold text-black text-center translate-y-0 group-hover:block group-hover:duration-700 transition-all group-hover:ease-in-out">
+          <div
+            className="col-span-1 p-4 bg-white hover:scale-110 sm:hover:scale-125 duration-300 ease-in-out flex flex-col justify-center items-center h-[400px] rounded-lg drop-shadow-md group"
+            style={{
+              backgroundImage: "url('/img-1.jpg')",
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+              backgroundRepeat: "no-repeat",
+            }}
+          >
+            <Link
+              href={"/faqs"}
+              className=" flex flex-col items-center group-hover:justify-center h-full"
+            >
+              <span className="hidden text-lg font-bold text-white text-center translate-y-0 group-hover:block group-hover:duration-700 transition-all group-hover:ease-in-out">
                 Account Management
               </span>
-              <span className="hidden text-xs font-bold text-black text-center group-hover:block group-hover:duration-300 group-hover:ease-in-out">
+              <span className="hidden text-xs font-bold text-white text-center group-hover:block group-hover:duration-300 group-hover:ease-in-out">
                 Maximizing revenue inside accounts
               </span>
-            </div>
+            </Link>
           </div>
         </div>
       </div>

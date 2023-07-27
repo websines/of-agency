@@ -24,12 +24,14 @@ const page = () => {
 
   return (
     <div>
-      <section
-        className="w-full h-96 flex flex-row items-end justify-end sm:justify-start p-4 sm:py-12 sm:px-32"
-        style={{
-          backgroundImage: `url('/test.jpg')`,
-        }}
-      >
+      <section className="w-full h-96 flex flex-row items-end justify-end sm:justify-start p-4 sm:py-12 sm:px-32 relative">
+        <video
+          src="/video-1.mp4"
+          autoPlay
+          muted
+          loop
+          className="absolute top-0 left-0 w-full h-full object-cover -z-10"
+        />
         <div className="bg-white p-6 text-black w-full sm:h-full h-auto sm:w-[30%]">
           <h1 className="text-3xl sm:text-4xl  font-extrabold">
             Account Management

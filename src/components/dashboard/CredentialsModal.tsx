@@ -78,11 +78,11 @@ export function CredentialsModal() {
           variant="default"
           className=" mx-4 hover:bg-black hover:text-white"
         >
-          My Credentials
+          CREDENTIALS
         </Button>
       </DialogTrigger>
 
-      <DialogContent className="sm:max-w-[425px] max-w-[400px] bg-white">
+      <DialogContent className="sm:max-w-[425px] max-w-[375px] bg-white">
         <form onSubmit={handleSubmit}>
           <DialogHeader>
             <DialogTitle className="my-2 font-semibold">

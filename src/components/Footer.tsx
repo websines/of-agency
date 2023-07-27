@@ -158,9 +158,6 @@ const Footer = () => {
                       >
                         Careers
                       </a>{" "}
-                      <span className="inline ml-1 text-xs bg-blue-700 text-white py-1 px-2 rounded-md">
-                        We're hiring
-                      </span>
                     </p>
                     <p>
                       <a
@@ -197,9 +194,7 @@ const Footer = () => {
                         Subscribe
                       </a>
                     </div>
-                    <p className="mt-3 text-sm text-gray-400">
-                      New UI kits or big discounts. Never spam.
-                    </p>
+                    <p className="mt-3 text-sm text-gray-400">Never spam.</p>
                   </form>
                 </div>
               </div>

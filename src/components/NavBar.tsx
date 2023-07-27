@@ -101,7 +101,16 @@ const Navbar = () => {
               )}
             </svg>
           </motion.div>
-          <Image src={""} className="w-[116px] h-[50px]" alt="logo" />
+          {isOverlayOpen ? (
+            ""
+          ) : (
+            <img
+              src={"/logo-black.png"}
+              className="w-[200px] h-[50px] object-cover scale-150 sm:scale-100 "
+              alt="logo"
+              style={{ scale: 2 }}
+            />
+          )}
         </div>
         <div className="w-[50%] justify-center items-center mx-auto">
           <ul className="hidden sm:flex flex-row justify-evenly items-center">
@@ -200,7 +209,7 @@ const Navbar = () => {
           >
             <div className="flex flex-col w-full p-16 items-start justify-start h-full text-white">
               <div className="h-[10%] sm:h-[20%] bg-transparent" />
-              <div className="flex flex-col justify-start items-start p-4 w-full sm:w-[40%]">
+              <div className="flex flex-col sm:mt-4 justify-start items-start p-4 w-full sm:w-[40%]">
                 <ul className="text-xl font-semibold w-full">
                   <Link href="/">
                     <li className="p-4 hover:bg-gray-500 hover:bg-opacity-25 rounded-xl w-full flex flex-row items-baseline space-x-3">

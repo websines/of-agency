@@ -26,23 +26,23 @@ export default function Home() {
           <p className="mt-12 sm:text-xl text-md text-center text-white font-semibold">
             The Only Professionally Accredited Onlyfans Agency by the BBB™
           </p>
-          <h1 className="text-blue-600 my-4 font-semibold text-center text-4xl sm:text-6xl">
-            ELITE MODEL AGENCY. <br />
+          <h1 className="text-white my-4 font-semibold text-center text-4xl sm:text-6xl">
+            ELITE MODEL GROUP. <br />
             THE ONLYFANS AGENCY BEHIND THE TOP 0.1%
           </h1>
           <p className="mt-6 font-medium text-white text-xs text-center">
-            *EMA Onlyfans Management contracts guarantee 6 figures annually.
+            *EMG Onlyfans Management contracts guarantee 6 figures annually.
           </p>
           <Link
-            href="/get-started"
-            className="sm:m-2 mt-4 px-12 py-4 sm:px-20 sm:py-6 bg-blue-600 font-medium text-lg hover:bg-black text-white duration-300 ease-in-out"
+            href="/contact-us"
+            className="sm:m-2 mt-4 px-12 py-4 sm:px-20 sm:py-6 bg-black text-white font-medium text-lg hover:bg-white hover:text-black duration-300 ease-in-out"
           >
             Get Started!
           </Link>
 
           <Link
             href="#slide-2"
-            className="hidden sm:block w-16 h-16 rounded-full border-2 border-white relative mt-8 mx-4 hover:bg-blue-600 hover:border-white hover:text-white"
+            className="hidden sm:block w-16 h-16 rounded-full border-2 border-white relative mt-8 mx-4 hover:bg-black hover:border-white hover:text-white"
           >
             <span>
               <svg
@@ -89,7 +89,7 @@ export default function Home() {
 
             <Link
               href="/account-management"
-              className="my-4 px-6 py-4 font-semibold flex flex-row space-x-2 border-b-2 border-orange-300 max-w-[80%] hover:scale-90 duration-300 ease-in-out"
+              className="my-4 px-6 py-4 font-semibold flex flex-row space-x-2 border-b-2 border-cyan-300 max-w-[80%] hover:scale-90 duration-300 ease-in-out"
             >
               View Management Benefits
               <span>
@@ -150,14 +150,14 @@ export default function Home() {
               WHERE VIRAL & <br /> PRACTICAL MEET
             </h1>
             <p className="my-4 text-lg font-medium text-black">
-              Fueled by industry experts, the EMA Onlyfans promotion team
+              Fueled by industry experts, the EMG Onlyfans promotion team
               provides unrivaled programs to gain viral exposure, and long-term
               organic strategies…keeping your momentum performing at its finest.
             </p>
 
             <Link
-              href="/account-management"
-              className="my-4 px-6 py-4 font-semibold flex flex-row space-x-2 border-b-2 border-orange-300 max-w-[80%] hover:scale-90 duration-300 ease-in-out"
+              href="/growth-management"
+              className="my-4 px-6 py-4 font-semibold flex flex-row space-x-2 border-b-2 border-cyan-300 max-w-[80%] hover:scale-90 duration-300 ease-in-out"
             >
               Learn More About Onlyfans Growth
               <span>
