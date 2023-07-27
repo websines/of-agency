@@ -51,51 +51,6 @@ const page = () => {
       title: "Client Manager",
       desc: "The client manager is the point of contact between the Creator and the rest of the operations team.",
     },
-    {
-      id: 3,
-      title: "Client Manager",
-      desc: "The client manager is the point of contact between the Creator and the rest of the operations team.",
-    },
-    {
-      id: 3,
-      title: "Client Manager",
-      desc: "The client manager is the point of contact between the Creator and the rest of the operations team.",
-    },
-    {
-      id: 3,
-      title: "Client Manager",
-      desc: "The client manager is the point of contact between the Creator and the rest of the operations team.",
-    },
-    {
-      id: 3,
-      title: "Client Manager",
-      desc: "The client manager is the point of contact between the Creator and the rest of the operations team.",
-    },
-    {
-      id: 3,
-      title: "Client Manager",
-      desc: "The client manager is the point of contact between the Creator and the rest of the operations team.",
-    },
-    {
-      id: 3,
-      title: "Client Manager",
-      desc: "The client manager is the point of contact between the Creator and the rest of the operations team.",
-    },
-    {
-      id: 3,
-      title: "Client Manager",
-      desc: "The client manager is the point of contact between the Creator and the rest of the operations team.",
-    },
-    {
-      id: 3,
-      title: "Client Manager",
-      desc: "The client manager is the point of contact between the Creator and the rest of the operations team.",
-    },
-    {
-      id: 3,
-      title: "Client Manager",
-      desc: "The client manager is the point of contact between the Creator and the rest of the operations team.",
-    },
   ];
 
   return (
@@ -140,7 +95,7 @@ const page = () => {
       </section>
       <section className="flex flex-col bg-gray-100 p-8 sm:p-16 justify-center items-center">
         <div className="sm:w-[80%] flex flex-col p-4 ">
-          <div className="flex  flex-col sm:flex-row justify-between items-center">
+          <div className="flex flex-col sm:flex-row justify-between items-center">
             <h2 className="uppercase text-2xl font-extrabold">
               FREQUENTLY ASKED QUESTIONS
             </h2>
@@ -148,7 +103,7 @@ const page = () => {
               Have a question not shown? Please{" "}
               <Link
                 href="/contact-us"
-                className="px-2 sm:px-4 py-2 bg-gray-300 rounded-3xl hover:bg-black hover:text-white"
+                className="px-2 sm:px-4 py-2 mt-4 sm:mt-0 bg-gray-300 rounded-3xl hover:bg-black hover:text-white"
               >
                 contact us.
               </Link>
@@ -159,7 +114,7 @@ const page = () => {
               <div className="w-full" key={item.id}>
                 <Accordion type="single" collapsible className="m-2">
                   <AccordionItem value="faq">
-                    <AccordionTrigger className="text-lg font-semibold p-4 bg-gray-200 hover:no-underline">
+                    <AccordionTrigger className="text-lg font-semibold p-4 bg-cyan-100 rounded hover:no-underline">
                       {item.title}
                     </AccordionTrigger>
                     <AccordionContent className="p-4">

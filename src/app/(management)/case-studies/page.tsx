@@ -15,7 +15,7 @@ const getData = async () => {
 const page = async () => {
   const data = (await getData()) as Blog[];
   return (
-    <div>
+    <div className="bg-white">
       <section
         className="w-full h-96 flex flex-row items-end justify-end sm:justify-start p-4 sm:py-12 sm:px-32"
         style={{
