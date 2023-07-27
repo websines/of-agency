@@ -6,7 +6,6 @@ const Tabs = () => {
   useEffect(() => {
     import("preline");
   }, []);
-
   return (
     <section id="faq" className="p-8 sm:p-16">
       <div className="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
@@ -58,7 +57,7 @@ const Tabs = () => {
                   className="hs-accordion-toggle group pb-3 inline-flex items-center justify-between gap-x-3 w-full md:text-lg font-semibold text-left text-gray-800 transition hover:text-gray-500 dark:text-gray-200 dark:hover:text-gray-400"
                   aria-controls="hs-basic-with-title-and-arrow-stretched-collapse-one"
                 >
-                  Can I cancel at anytime?
+                  What is your pricing structure?
                   <svg
                     className="hs-accordion-active:hidden block w-3 h-3 text-gray-600 group-hover:text-gray-500 dark:text-gray-400"
                     width="16"
@@ -96,9 +95,10 @@ const Tabs = () => {
                   aria-labelledby="hs-basic-with-title-and-arrow-stretched-heading-one"
                 >
                   <p className="text-gray-600 dark:text-gray-400">
-                    Yes, you can cancel anytime no questions are asked while you
-                    cancel but we would highly appreciate if you will give us
-                    some feedback.
+                    Our pricing structure is based on a flat rate minimum + a %
+                    of revenue, whichever is higher. The rates depend on the
+                    size of your account. Please contact us for a proposal for
+                    your account.
                   </p>
                 </div>
               </div>
@@ -111,7 +111,7 @@ const Tabs = () => {
                   className="hs-accordion-toggle group pb-3 inline-flex items-center justify-between gap-x-3 w-full md:text-lg font-semibold text-left text-gray-800 transition hover:text-gray-500 dark:text-gray-200 dark:hover:text-gray-400"
                   aria-controls="hs-basic-with-title-and-arrow-stretched-collapse-two"
                 >
-                  My team has credits. How do we use them?
+                  What should I expect from the proposal process?
                   <svg
                     className="hs-accordion-active:hidden block w-3 h-3 text-gray-600 group-hover:text-gray-500 dark:text-gray-400"
                     width="16"
@@ -149,9 +149,11 @@ const Tabs = () => {
                   aria-labelledby="hs-basic-with-title-and-arrow-stretched-heading-two"
                 >
                   <p className="text-gray-600 dark:text-gray-400">
-                    Once your team signs up for a subscription plan. This is
-                    where we sit down, grab a cup of coffee and dial in the
-                    details.
+                    After sending us your information, please give our team a
+                    day or two to get back to you. We'll ask a few follow-up
+                    questions and schedule a discovery call to make sure you can
+                    ask all the questions you want from our team. Following that
+                    call, we'll package a proposal for your review and approval.
                   </p>
                 </div>
               </div>
@@ -163,7 +165,8 @@ const Tabs = () => {
                   className="hs-accordion-toggle group pb-3 inline-flex items-center justify-between gap-x-3 w-full md:text-lg font-semibold text-left text-gray-800 transition hover:text-gray-500 dark:text-gray-200 dark:hover:text-gray-400"
                   aria-controls="hs-basic-with-title-and-arrow-stretched-collapse-five"
                 >
-                  How do I get access to a theme I purchased?
+                  How long does it take to see results from your marketing
+                  campaigns?
                   <svg
                     className="hs-accordion-active:hidden block w-3 h-3 text-gray-600 group-hover:text-gray-500 dark:text-gray-400"
                     width="16"
@@ -201,12 +204,13 @@ const Tabs = () => {
                   aria-labelledby="hs-basic-with-title-and-arrow-stretched-heading-five"
                 >
                   <p className="text-gray-600 dark:text-gray-400">
-                    If you lose the link for a theme you purchased, don't panic!
-                    We've got you covered. You can login to your account, tap
-                    your avatar in the upper right corner, and tap Purchases. If
-                    you didn't create a login or can't remember the information,
-                    you can use our handy Redownload page, just remember to use
-                    the same email you originally made your purchases with.
+                    The timeframe for seeing results can vary depending on
+                    several factors, such as the type of campaign, your target
+                    audience, and the industry you're in. Some campaigns may
+                    yield noticeable results within a few weeks, while others
+                    might take a few months. We work closely with our clients to
+                    set realistic expectations and provide regular updates on
+                    the progress of the campaigns.
                   </p>
                 </div>
               </div>
@@ -219,7 +223,7 @@ const Tabs = () => {
                   className="hs-accordion-toggle group pb-3 inline-flex items-center justify-between gap-x-3 w-full md:text-lg font-semibold text-left text-gray-800 transition hover:text-gray-500 dark:text-gray-200 dark:hover:text-gray-400"
                   aria-controls="hs-basic-with-title-and-arrow-stretched-collapse-six"
                 >
-                  Upgrade License Type
+                  Can you explain more about your network of Onlyfans creators?
                   <svg
                     className="hs-accordion-active:hidden block w-3 h-3 text-gray-600 group-hover:text-gray-500 dark:text-gray-400"
                     width="16"
@@ -257,10 +261,12 @@ const Tabs = () => {
                   aria-labelledby="hs-basic-with-title-and-arrow-stretched-heading-six"
                 >
                   <p className="text-gray-600 dark:text-gray-400">
-                    There may be times when you need to upgrade your license
-                    from the original type you purchased and we have a solution
-                    that ensures you can apply your original purchase cost to
-                    the new license purchase.
+                    Our network consists of a diverse group of Onlyfans creators
+                    who have built a substantial following and are actively
+                    seeking opportunities to collaborate with other creators. If
+                    you're interested in leveraging this network for paid
+                    shoutouts, we can connect you with relevant creators based
+                    on your target audience and niche.
                   </p>
                 </div>
               </div>
