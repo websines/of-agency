@@ -58,6 +58,7 @@ const page = () => {
           autoPlay
           muted
           loop
+          playsInline
           className="absolute top-0 left-0 w-full h-full object-cover -z-10"
         />
         <div className="bg-white p-6 text-black w-full sm:h-full h-auto sm:w-[30%]">

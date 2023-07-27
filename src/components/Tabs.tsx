@@ -7,7 +7,7 @@ const Tabs = () => {
   }, []);
 
   return (
-    <section className="p-8 sm:p-16">
+    <section className="p-4 sm:p-16">
       <div className="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
         <div className="relative p-6 md:p-16">
           <div className="relative z-10 lg:grid lg:grid-cols-12 lg:gap-16 lg:items-center">

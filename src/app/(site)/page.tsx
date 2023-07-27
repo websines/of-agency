@@ -133,7 +133,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <div className="w-full hidden sm:block p-16 bg-white"></div>
+      <div className="w-full hidden sm:block p-16 bg-black"></div>
       <section
         id="slide-3"
         className="hidden sm:block w-full min-h-screen relative"
