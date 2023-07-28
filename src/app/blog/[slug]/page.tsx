@@ -12,7 +12,7 @@ async function getData(slug: string) {
   return data;
 }
 
-export const PortableTextComponent = {
+const PortableTextComponent = {
   types: {
     image: ({ value }: any) => {
       return (
