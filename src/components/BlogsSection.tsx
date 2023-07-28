@@ -44,14 +44,14 @@ const BlogsSection = async () => {
                 <h3 className="text-xl font-semibold text-gray-800 dark:text-gray-300 dark:group-hover:text-white">
                   {post.title}
                 </h3>
-                <p className="mt-5 text-gray-600 dark:text-gray-400">
+                <p className="mt-5 text-gray-600 dark:text-gray-400 overflow-hidden">
                   {post.overview}
                 </p>
               </div>
               <div className="mt-auto flex items-center gap-x-3">
                 <div>
-                  <h5 className="text-sm text-gray-800 dark:text-gray-200">
-                    {post._createdAt}
+                  <h5 className="text-sm text-gray-800 dark:text-gray-200 font-semibold">
+                    {new Date(post._createdAt).toISOString().split("T")[0]}
                   </h5>
                 </div>
               </div>

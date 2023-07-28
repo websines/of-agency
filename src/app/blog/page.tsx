@@ -1,5 +1,5 @@
 import { sanity_client } from "@/lib/sanity-client";
-import React from "react";
+import React, { useEffect } from "react";
 import { Blog } from "@/lib/types";
 import Link from "next/link";
 import BlogsCard from "@/components/BlogCard";
@@ -12,6 +12,7 @@ const getData = async () => {
 
   return data;
 };
+
 const page = async () => {
   const data = (await getData()) as Blog[];
   return (

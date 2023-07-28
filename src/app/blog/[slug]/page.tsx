@@ -12,44 +12,101 @@ async function getData(slug: string) {
   return data;
 }
 
-const PortableTextComponent = {
+export const PortableTextComponent = {
   types: {
-    image: ({ value }: { value: any }) => (
-      <Image src={urlFor(value).url()} alt="img" height={1000} width={1000} />
+    image: ({ value }: any) => {
+      return (
+        <div className="relative w-full h-96 m-10 mx-auto">
+          <Image
+            className="object-contain"
+            src={urlFor(value).url()}
+            alt="blog post image"
+            fill
+          />
+        </div>
+      );
+    },
+  },
+  list: {
+    bullet: ({ children }: any) => (
+      <ul className="ml-10 py-5 list-disc space-y-5">{children}</ul>
+    ),
+    number: ({ children }: any) => (
+      <ol className="mt-lg list-decimal">{children}</ol>
     ),
   },
-};
+  block: {
+    h1: ({ children }: any) => (
+      <h1 className="text-5xl py-10 font-bold">{children}</h1>
+    ),
+    h2: ({ children }: any) => (
+      <h2 className="text-4xl py-10 font-bold">{children}</h2>
+    ),
+    h3: ({ children }: any) => (
+      <h3 className="text-3xl py-10 font-bold">{children}</h3>
+    ),
+    h4: ({ children }: any) => (
+      <h4 className="text-2xl py-10 font-bold">{children}</h4>
+    ),
 
+    blockquote: ({ children }: any) => (
+      <blockquote className="border-l-[#f7ab0a] border-l-4 pl-5 py-5 my-5">
+        {children}
+      </blockquote>
+    ),
+  },
+  marks: {
+    link: ({ children, value }: any) => {
+      const rel = !value.href.startsWith("/")
+        ? "noreferrer noopener"
+        : undefined;
+
+      return (
+        <Link
+          href={value.href}
+          rel={rel}
+          className="underline decoration-[#f7ab0a] hover:decoration-black"
+        >
+          {children}
+        </Link>
+      );
+    },
+  },
+};
 const Post = ({ data }: any) => {
   return (
     <div className="bg-white">
       {data.map((post: any) => (
         <section className="p-8 sm:p-16 min-h-screen">
-          <div className="flex flex-row justify-between items-center mx-4">
+          <div className="flex flex-row justify-between items-center mx-4 my-4">
             <p className="font-semibold tracking-tight text-lg">
+              Published On:{" "}
               {new Date(post._createdAt).toISOString().split("T")[0]}
             </p>
             <Link
               href="/blog"
-              className="hover:underline text-lg font-semibold"
+              className="hover:scale-105 transition duration-200 ease-in-out text-lg font-semibold bg-black rounded text-white px-4 py-2"
             >
               Go Back
             </Link>
           </div>
           <div className="flex flex-col justify-center items-center p-8 space-y-4">
-            <h1 className="text-2xl tracking-tight font-bold">{post.title}</h1>
-            <p>{post.overview}</p>
             <Image
               src={urlFor(post.image.asset._ref).url()}
               alt={post.title}
               height={1000}
               width={1000}
-              className="w-auto h-96 rounded-xl"
+              className="w-auto h-96 rounded-xl object-contain"
             />
-            <PortableText
-              value={post.content}
-              components={PortableTextComponent}
-            />
+            <h1 className="text-4xl text-center tracking-tight font-bold my-12">
+              {post.title}
+            </h1>
+            <div className="p-4">
+              <PortableText
+                value={post.content}
+                components={PortableTextComponent}
+              />
+            </div>
           </div>
         </section>
       ))}

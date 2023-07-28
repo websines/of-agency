@@ -25,7 +25,7 @@ const BlogsCard = ({
       className="group rounded-xl overflow-hidden"
       href={`/blog/${slug.current}`}
     >
-      <div className="sm:flex">
+      <div className="sm:flex bg-gray-100 rounded p-4">
         <div className="flex-shrink-0 relative rounded-xl overflow-hidden w-full sm:w-56 h-44">
           <Image
             src={urlFor(image.asset._ref).url()}
@@ -39,7 +39,9 @@ const BlogsCard = ({
           <h3 className="text-xl font-semibold text-gray-800 group-hover:text-gray-600 dark:text-gray-300 dark:group-hover:text-white">
             {title}
           </h3>
-          <p className="mt-3 text-gray-600 dark:text-gray-400">{overview}</p>
+          <p className="mt-3 text-gray-600 dark:text-gray-400 max-h-36 overflow-hidden">
+            {overview}
+          </p>
           <p className="mt-4 inline-flex items-center gap-x-1.5 text-blue-600 decoration-2 hover:underline font-medium">
             Read more
             <svg
