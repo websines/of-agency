@@ -107,7 +107,7 @@ const Navbar = () => {
             <Link href="/">
               <img
                 src={"/logo-black.png"}
-                className="w-[100px] h-[50px] object-fit"
+                className="w-[100px] h-[50px] object-contain scale-150 sm:scale-100"
                 alt="logo"
               />
             </Link>
