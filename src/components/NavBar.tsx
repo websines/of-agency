@@ -104,11 +104,13 @@ const Navbar = () => {
           {isOverlayOpen ? (
             ""
           ) : (
-            <img
-              src={"/logo-black.png"}
-              className="w-[100px] h-[50px] object-fit"
-              alt="logo"
-            />
+            <Link href="/">
+              <img
+                src={"/logo-black.png"}
+                className="w-[100px] h-[50px] object-fit"
+                alt="logo"
+              />
+            </Link>
           )}
         </div>
         <div className="w-[50%] justify-center items-center mx-auto">
